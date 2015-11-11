@@ -1,19 +1,23 @@
 package casa.kieran.input;
 
 /**
- * Created by kieran on 2015/11/06.
+ * Created by kieran on 2015/11/10.
  */
 public class Text implements Input {
 
-    String text;
+    private String text;
 
-    public Text(String text) {
-        this.text = text;
+    public Text(String input) {
+        this.text = input;
     }
 
     @Override
-    public Character getInputAt(Integer location) {
-        return this.text.charAt(location);
+    public Byte getByte(Integer location) {
+        try {
+            return this.text.getBytes()[location];
+        } catch (IndexOutOfBoundsException e) {
+            throw new RuntimeException("Index " + location + " out of range.");
+        }
     }
 
     @Override
@@ -22,17 +26,7 @@ public class Text implements Input {
     }
 
     @Override
-    public Integer indexOf(Character character) {
-        return this.text.indexOf(character);
-    }
-
-    @Override
-    public Integer indexOf(String string) {
-        return this.text.indexOf(string);
-    }
-
-    @Override
-    public Integer indexOf(String string, Integer start) {
-        return this.text.indexOf(string, start);
+    public String toString() {
+        return this.text;
     }
 }

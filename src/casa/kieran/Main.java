@@ -1,47 +1,45 @@
 package casa.kieran;
 
 import casa.kieran.algorithm.Algorithm;
-import casa.kieran.algorithm.BuiltIn;
+import casa.kieran.algorithm.Algorithms;
 import casa.kieran.algorithm.KnuthMorrisPratt;
 import casa.kieran.algorithm.Naive;
+import casa.kieran.algorithm.trie.Trie;
 import casa.kieran.input.Input;
-import casa.kieran.input.Packet;
 import casa.kieran.input.Text;
+import casa.kieran.result.Results;
 import casa.kieran.rule.Rule;
 import casa.kieran.rule.Rules;
-
-import java.util.ArrayList;
 
 public class Main {
 
 
     public static void main(String[] args) {
 
-        Packet packet = new Packet("tcpdump.pcap");
+        Input input = new Text("Hello there you crazy");
 
-        String text = "Hello there you crazy person";
-
-        Input input = new Text(text);
-
-        Rule term = new Rule("crazy");
-        Rule badRule = new Rule("asfsdf");
-        Rule lots = new Rule("e");
+        Rule goodRule = new Rule("crazy");
+        Rule badRule = new Rule("afdsfds");
+        Rule crazyRule = new Rule("e");
 
         Rules rules = new Rules();
+        rules.addRule(goodRule);
         rules.addRule(badRule);
-        rules.addRule(term);
-        rules.addRule(lots);
+        rules.addRule(crazyRule);
 
-        ArrayList<Algorithm> algorithms = new ArrayList<>();
-        algorithms.add(new BuiltIn(rules));
-        algorithms.add(new Naive(rules));
-        algorithms.add(new KnuthMorrisPratt(rules));
+        Results results = new Results();
+
+        Algorithms algorithms = new Algorithms();
+        algorithms.addAlgorithm(Naive.getInstance(rules));
+        algorithms.addAlgorithm(KnuthMorrisPratt.getInstance(rules));
+        algorithms.addAlgorithm(Trie.getInstance(rules));
 
         for (Algorithm algorithm :
                 algorithms) {
-            System.out.println(algorithm.search(input));
+            algorithm.search(input, results);
         }
 
+        System.out.println(results);
 
     }
 }

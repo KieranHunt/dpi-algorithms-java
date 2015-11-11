@@ -1,7 +1,8 @@
 package casa.kieran.algorithm;
 
 import casa.kieran.input.Input;
-import casa.kieran.output.Results;
+import casa.kieran.result.Result;
+import casa.kieran.result.Results;
 import casa.kieran.rule.Rule;
 import casa.kieran.rule.Rules;
 
@@ -9,32 +10,51 @@ import casa.kieran.rule.Rules;
  * Created by kieran on 2015/11/06.
  */
 public class Naive implements Algorithm {
+
+    private static Naive instance;
+
     private Rules rules;
 
-    public Naive(Rules rules) {
+    private Naive(Rules rules) {
+        this.rules = rules;
+    }
+
+    public static Naive getInstance(Rules rules) {
+        if (instance == null) {
+            return new Naive(rules);
+        }
+        instance.changeRules(rules);
+        return instance;
+    }
+
+    private void changeRules(Rules rules) {
         this.rules = rules;
     }
 
     @Override
-    public void addRules(Rules rules) {
-        this.rules = rules;
-    }
+    public void search(Input input, Results results) {
+        Result result = new Result(this.rules, input, this);
+        result.start();
 
-    @Override
-    public Results search(Input input) {
-        Results results = new Results(this.rules);
         for (Rule rule :
                 this.rules) {
-            for (int i = 0; i < input.getLength() - rule.getRule().length(); i++) {
+            for (int i = 0; i < input.getLength() - rule.getLength(); i++) {
                 int j = 0;
-                while (j < rule.getRule().length() && input.getInputAt(i + j) == rule.getRule().charAt(j)) {
+                while (j < rule.getLength() && input.getByte(i + j) == rule.getByte(j)) {
                     j++;
                 }
-                if (j == rule.getRule().length()) {
-                    results.add(rule, i);
+                if (j == rule.getLength()) {
+                    result.addLocation(i);
                 }
             }
         }
-        return results;
+
+        result.end();
+        results.addResult(result);
+    }
+
+    @Override
+    public String toString() {
+        return "Naïve";
     }
 }

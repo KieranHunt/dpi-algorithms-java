@@ -1,26 +1,25 @@
 package casa.kieran.rule;
 
 /**
- * Created by kieran on 2015/11/05.
+ * Created by kieran on 2015/11/10.
  */
 public class Rule {
     private String rule;
 
-    /**
-     * Create a new Rule object
-     *
-     * @param rule The text containing the new rule
-     */
     public Rule(String rule) {
         this.rule = rule;
     }
 
-    public String getRule() {
-        return rule;
+    public Byte getByte(Integer location) {
+        try {
+            return rule.getBytes()[location];
+        } catch (IndexOutOfBoundsException e) {
+            throw new RuntimeException("Index " + location + " out of range.");
+        }
     }
 
-    public void setRule(String rule) {
-        this.rule = rule;
+    public Integer getLength() {
+        return rule.length();
     }
 
     @Override
