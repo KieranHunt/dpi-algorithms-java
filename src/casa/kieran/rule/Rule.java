@@ -1,8 +1,5 @@
 package casa.kieran.rule;
 
-/**
- * Created by kieran on 2015/11/10.
- */
 public class Rule {
     private String rule;
 

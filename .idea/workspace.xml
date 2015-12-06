@@ -2,41 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="915f4217-a40c-4c93-a239-ba4da7da6158" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/joda_time_joda_time_2_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/Algorithms.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/input/PCAP.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/result/Result.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/result/Results.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jnetpcap.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/jnetpcap.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/BuiltIn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/input/Packet$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/input/Packet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/output/Result.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/output/Results.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/rule/Rules$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/BuiltIn.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/casa/kieran/input/Packet.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/casa/kieran/output/Result.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/casa/kieran/output/Results.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/KnuthMorrisPratt.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/Naive.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/KnuthMorrisPratt.java" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/knuthmorrispratt/KnuthMorrisPratt.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/Naive.java" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/naive/Naive.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/Main.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/Algorithm.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/Algorithm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/KnuthMorrisPratt.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/KnuthMorrisPratt.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/Naive.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/Naive.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/input/Input.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/input/Input.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/input/Text.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/input/Text.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/trie/Trie.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/trie/Trie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/trie/TrieStructure.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/algorithm/trie/TrieStructure.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/result/Result.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/result/Result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/result/Results.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/result/Results.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/rule/Rule.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/rule/Rule.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/rule/Rules.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/rule/Rules.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dpi-algorithms-java.iml" afterPath="$PROJECT_DIR$/dpi-algorithms-java.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/Main.java" afterPath="$PROJECT_DIR$/src/casa/kieran/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/Algorithm.java" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/Algorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/KnuthMorrisPratt.java" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/KnuthMorrisPratt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/Naive.java" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/Naive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/input/Input.java" afterPath="$PROJECT_DIR$/src/casa/kieran/input/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/input/Text.java" afterPath="$PROJECT_DIR$/src/casa/kieran/input/Text.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java" afterPath="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/result/Result.java" afterPath="$PROJECT_DIR$/src/casa/kieran/result/Result.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/result/Results.java" afterPath="$PROJECT_DIR$/src/casa/kieran/result/Results.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/rule/Rule.java" afterPath="$PROJECT_DIR$/src/casa/kieran/rule/Rule.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/rule/Rules.java" afterPath="$PROJECT_DIR$/src/casa/kieran/rule/Rules.java" />
     </list>
@@ -65,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,10 +60,8 @@
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,20 +69,8 @@
       <file leaf-file-name="Trie.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7868561">
-              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Result.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.5863747">
+              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,20 +114,21 @@
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/AlgorithmFactory.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/Algorithms.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/Algorithm.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/result/Results.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/rule/Rule.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/input/Input.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/input/Text.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/ahoCorasick/trie.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/AhoCorasick/trie.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/AhoCorasick/TrieNode.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/AhoCorasick/Trie.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/rule/Rules.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/result/Result.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/KnuthMorrisPratt.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/Naive.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/rule/Rules.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/result/Result.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/rule/Rule.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/naive/Naive.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/result/Results.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/Main.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java" />
       </list>
     </option>
@@ -180,8 +150,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="width" value="1280" />
+    <option name="height" value="698" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -210,6 +180,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -366,14 +337,13 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="true" />
@@ -814,12 +784,17 @@
       <workItem from="1447051160482" duration="7884000" />
       <workItem from="1447136421861" duration="10381000" />
       <workItem from="1447157345517" duration="8640000" />
-      <workItem from="1447223336495" duration="286000" />
+      <workItem from="1447223336495" duration="879000" />
+      <workItem from="1447675522805" duration="364000" />
+      <workItem from="1447675943073" duration="331000" />
+      <workItem from="1449340307335" duration="1019000" />
+      <workItem from="1449390519607" duration="795000" />
+      <workItem from="1449394448648" duration="5386000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49049000" />
+    <option name="totallyTimeSpent" value="57537000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -831,8 +806,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1280" height="698" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -841,16 +816,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20833333" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30206677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16614583" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39939025" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55802864" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -872,18 +847,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="18" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -892,6 +859,178 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/rule/Rules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/rule/Rules.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -906,19 +1045,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/KnuthMorrisPratt.java">
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/knuthmorrispratt/KnuthMorrisPratt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -936,9 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -956,9 +1086,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,7 +1124,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,28 +1134,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39225942">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Results.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7322835">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/input/Text.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4707113">
           <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1037,7 +1145,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.496063">
           <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1045,9 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4015748">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1062,24 +1166,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25477707">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/rule/Rule.java">
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/knuthmorrispratt/KnuthMorrisPratt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85987264">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.8801598">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/Naive.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/util/function/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8002663">
-          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.39225942">
+          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1088,48 +1195,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/rule/Rules.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55925435">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/KnuthMorrisPratt.java">
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/rule/Rule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8801598">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.049916804">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Results.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14975041">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/naive/Naive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.544">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="652" column="0" selection-start-line="652" selection-start-column="0" selection-end-line="652" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/TrieStructure.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="9" selection-start-line="33" selection-start-column="9" selection-end-line="33" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/result/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="22" column="38" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1138,8 +1257,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/algorithm/trie/Trie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7868561">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5863747">
+          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

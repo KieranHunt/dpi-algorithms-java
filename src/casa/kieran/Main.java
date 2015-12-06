@@ -2,8 +2,8 @@ package casa.kieran;
 
 import casa.kieran.algorithm.Algorithm;
 import casa.kieran.algorithm.Algorithms;
-import casa.kieran.algorithm.KnuthMorrisPratt;
-import casa.kieran.algorithm.Naive;
+import casa.kieran.algorithm.knuthmorrispratt.KnuthMorrisPratt;
+import casa.kieran.algorithm.naive.Naive;
 import casa.kieran.algorithm.trie.Trie;
 import casa.kieran.input.Input;
 import casa.kieran.input.Text;
@@ -19,7 +19,7 @@ public class Main {
         Input input = new Text("Hello there you crazy");
 
         Rule goodRule = new Rule("crazy");
-        Rule badRule = new Rule("afdsfds");
+        Rule badRule = new Rule("aaaaa");
         Rule crazyRule = new Rule("e");
 
         Rules rules = new Rules();

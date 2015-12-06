@@ -3,9 +3,6 @@ package casa.kieran.rule;
 import java.util.HashSet;
 import java.util.Iterator;
 
-/**
- * Created by kieran on 2015/11/10.
- */
 public class Rules implements Iterable<Rule> {
     private HashSet<Rule> rules;
 

@@ -1,14 +1,12 @@
-package casa.kieran.algorithm;
+package casa.kieran.algorithm.naive;
 
+import casa.kieran.algorithm.Algorithm;
 import casa.kieran.input.Input;
 import casa.kieran.result.Result;
 import casa.kieran.result.Results;
 import casa.kieran.rule.Rule;
 import casa.kieran.rule.Rules;
 
-/**
- * Created by kieran on 2015/11/06.
- */
 public class Naive implements Algorithm {
 
     private static Naive instance;
@@ -38,10 +36,12 @@ public class Naive implements Algorithm {
 
         for (Rule rule :
                 this.rules) {
-            for (int i = 0; i < input.getLength() - rule.getLength(); i++) {
-                int j = 0;
-                while (j < rule.getLength() && input.getByte(i + j) == rule.getByte(j)) {
-                    j++;
+            for (int i = 0; i <= input.getLength() - rule.getLength(); i++) {
+                int j;
+                for (j = 0; j < rule.getLength(); j++) {
+                    if (!input.getByte(i + j).equals(rule.getByte(j))) {
+                        break;
+                    }
                 }
                 if (j == rule.getLength()) {
                     result.addLocation(i);

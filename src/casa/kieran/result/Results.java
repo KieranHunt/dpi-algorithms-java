@@ -3,9 +3,7 @@ package casa.kieran.result;
 import java.util.HashSet;
 import java.util.Iterator;
 
-/**
- * Created by kieran on 2015/11/10.
- */
+
 public class Results implements Iterable<Result> {
     private HashSet<Result> results;
 

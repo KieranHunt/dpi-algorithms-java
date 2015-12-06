@@ -7,9 +7,6 @@ import casa.kieran.rule.Rules;
 import java.time.Instant;
 import java.util.ArrayList;
 
-/**
- * Created by kieran on 2015/11/10.
- */
 public class Result {
     private Rules rules;
     private Input input;

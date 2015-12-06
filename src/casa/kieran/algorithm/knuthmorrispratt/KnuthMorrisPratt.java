@@ -1,5 +1,6 @@
-package casa.kieran.algorithm;
+package casa.kieran.algorithm.knuthmorrispratt;
 
+import casa.kieran.algorithm.Algorithm;
 import casa.kieran.input.Input;
 import casa.kieran.result.Result;
 import casa.kieran.result.Results;
