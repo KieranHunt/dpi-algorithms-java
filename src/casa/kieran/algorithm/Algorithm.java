@@ -14,5 +14,5 @@ public interface Algorithm {
      * @param input   input The text to be searched through
      * @param results the results object that needs to be added to
      */
-    public void search(Input input, Results results);
+    void search(Input input, Results results);
 }

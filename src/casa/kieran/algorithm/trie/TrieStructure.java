@@ -2,10 +2,8 @@ package casa.kieran.algorithm.trie;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
-/**
- * Created by kieran on 2015/11/10.
- */
 public class TrieStructure {
     private HashMap<Byte, TrieStructure> children;
     private Byte character;
@@ -36,8 +34,8 @@ public class TrieStructure {
         this.children.get(term.get(0)).insert(new ArrayList<>(term.subList(1, term.size())));
     }
 
-    public Boolean search(ArrayList<Byte> term) {
-        if (this.isLeaf && term.size() == 0) {
+    public Boolean search(List<Byte> term) {
+        if (this.isLeaf) {
             return true;
         }
         if (term.size() == 0) {

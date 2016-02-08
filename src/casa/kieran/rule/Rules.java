@@ -22,7 +22,8 @@ public class Rules implements Iterable<Rule> {
     @Override
     public String toString() {
         StringBuffer stringBuffer = new StringBuffer();
-        this.forEach((rule) -> stringBuffer.append(rule + " "));
+        this.forEach((rule) -> stringBuffer.append(rule + "$"));
+        stringBuffer.deleteCharAt(stringBuffer.length() - 1);
         return stringBuffer.toString();
     }
 }

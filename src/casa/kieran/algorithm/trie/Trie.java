@@ -8,6 +8,7 @@ import casa.kieran.rule.Rule;
 import casa.kieran.rule.Rules;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by kieran on 2015/11/10.
@@ -54,11 +55,9 @@ public class Trie implements Algorithm {
         Result result = new Result(this.rules, input, this);
         result.start();
         for (int i = 0; i < input.getLength(); i++) {
-            for (int j = 1; j <= input.getLength() - i; j++) {
-                ArrayList<Byte> searchList = getSublist(input, i, i + j);
-                if (this.trieStructure.search(searchList)){
-                    result.addLocation(i);
-                }
+            List<Byte> searchList = getSublist(input, i, input.getLength());
+            if (this.trieStructure.search(searchList)) {
+                result.addLocation(i);
             }
         }
         result.end();

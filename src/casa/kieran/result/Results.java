@@ -2,10 +2,11 @@ package casa.kieran.result;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 
 public class Results implements Iterable<Result> {
-    private HashSet<Result> results;
+    private Set<Result> results;
 
     public Results() {
         this.results = new HashSet<>();

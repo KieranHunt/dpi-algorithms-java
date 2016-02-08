@@ -1,7 +1,20 @@
 package casa.kieran.input;
 
-/**
- * Created by kieran on 2016/02/08.
- */
-public class Inputs {
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class Inputs implements Iterable<Input> {
+
+    List<Input> inputs;
+
+    public Inputs() {
+        inputs = new ArrayList<>();
+    }
+
+    @Override
+    public Iterator<Input> iterator() {
+        return inputs.iterator();
+    }
 }
