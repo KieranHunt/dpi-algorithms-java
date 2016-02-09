@@ -1,0 +1,2 @@
+pcap,/Users/kieran/Work/dpi-algorithms-java/out/artifacts/dpi_algorithms_java_jar/dns.cap
+text,resources/small-text.txt

@@ -1,0 +1,21 @@
+{
+  "algorithms": [
+    "Naive",
+    "Bitap",
+    "BoyerMoore"
+  ],
+  "rules": [
+    "o"
+  ],
+  "inputs": [
+    {
+      "type": "pcap",
+      "location": "resources/dns.cap"
+    },
+    {
+      "type": "pcap",
+      "location": "resources/tcpdump.pcap"
+    }
+  ],
+  "times": 2
+}
