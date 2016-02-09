@@ -7,32 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915f4217-a40c-4c93-a239-ba4da7da6158" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/Main.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dpi-algorithms.log" afterPath="$PROJECT_DIR$/dpi-algorithms.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/testConfiguration.json" afterPath="$PROJECT_DIR$/resources/testConfiguration.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/Main.java" afterPath="$PROJECT_DIR$/src/casa/kieran/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/Algorithm.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/Algorithm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/bitap/Bitap.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/bitap/Bitap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/knuthmorrispratt/KnuthMorrisPratt.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/knuthmorrispratt/KnuthMorrisPratt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/naive/Naive.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/naive/Naive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/trie/Trie.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/trie/Trie.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Input.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/input/InputsFactory.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/input/InputsFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Packet.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Packet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Pcap.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Pcap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Text.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/input/Text.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/input/TextFile.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/input/TextFile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/result/Result.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/result/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/result/Results.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/result/Results.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/OverallStatistics.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/OverallStatistics.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/Statistics.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/Statistics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmStatisticsGenerator.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmStatisticsGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/filter/Filter.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/filter/Filter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/filter/ResultsFilterer.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/filter/ResultsFilterer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/test/Test.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/test/Test.java" />
     </list>
@@ -68,7 +48,19 @@
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractStatisticsGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="54" />
+              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +80,43 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="AlgorithmStatisticsGenerator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmStatisticsGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="InputFileStatisticsGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10321101">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.48165137">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/test/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="215" column="1" selection-start-line="215" selection-start-column="1" selection-end-line="215" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/result/Result.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="84" column="34" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -155,21 +179,21 @@
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/StatisticsGenerator.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmAbstractStatisticsGenerator.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/Statistics.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/OverallStatistics.java" />
         <option value="$PROJECT_DIR$/resources/testConfiguration.json" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmStatisticsGenerator.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/result/Results.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/result/Result.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/Algorithm.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/bitap/Bitap.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/knuthmorrispratt/KnuthMorrisPratt.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/naive/Naive.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/trie/Trie.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/test/Test.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/result/Result.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/Main.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/test/Test.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmStatisticsGenerator.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java" />
       </list>
     </option>
@@ -697,7 +721,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jackson-annotations-2.7.0.jar!/" />
-    <property name="SearchEverywhereHistoryKey" value="Ma&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Resu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Test&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/test/Test.java&#10;Res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Results.java&#10;Resul&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Algor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithm.java" />
+    <property name="SearchEverywhereHistoryKey" value="Abs&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java&#10;Test&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/test/Test.java&#10;Ma&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Resu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Results.java&#10;Resul&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Algor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithm.java" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="dpi-algorithms-java" />
@@ -1164,12 +1188,12 @@
       <workItem from="1449856175047" duration="8850000" />
       <workItem from="1454915291274" duration="13277000" />
       <workItem from="1454932134701" duration="226000" />
-      <workItem from="1454932439213" duration="35553000" />
+      <workItem from="1454932439213" duration="36563000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119017000" />
+    <option name="totallyTimeSpent" value="120027000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1222,6 +1246,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/casa/kieran/Main.java</url>
+          <line>53</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -1231,7 +1263,7 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="87" />
+      <option name="time" value="88" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1427,14 +1459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/input/Input.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/input/Packet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1493,16 +1517,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/OverallStatistics.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27522936">
@@ -1521,14 +1535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmStatisticsGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="36" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/testConfiguration.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375">
@@ -1541,14 +1547,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="22" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/result/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41284403">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1601,10 +1599,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/input/Input.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.086009175">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/result/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="34" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="205" column="22" selection-start-line="205" selection-start-column="22" selection-end-line="205" selection-end-column="22" />
+          <caret line="215" column="1" selection-start-line="215" selection-start-column="1" selection-end-line="215" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1612,7 +1626,17 @@
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1622,18 +1646,28 @@
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="39" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="54" />
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/algorithm/AlgorithmStatisticsGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10321101">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
+        <state vertical-scroll-proportion="0.48165137">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,16 +7,22 @@ import casa.kieran.dpi.statistics.OverallStatistics;
 import casa.kieran.dpi.statistics.Statistics;
 import casa.kieran.dpi.statistics.filter.Filter;
 import casa.kieran.dpi.statistics.filter.ResultsFilterer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AlgorithmStatisticsGenerator extends AbstractStatisticsGenerator {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(AlgorithmStatisticsGenerator.class);
+
     public static OverallStatistics generateAlgorithmStatistics(Results results) {
         OverallStatistics overallStatistics = new OverallStatistics();
 
         results.getTest().getAlgorithms().forEach(algorithm -> {
+
+            LOGGER.info(GENERATING_MESSAGE + "algorithm: " + algorithm);
 
             Filter filter = new Filter("algorithmClass", algorithm.getClass(), true);
             List<Result> resultList = ResultsFilterer.getFilteredResultList(results, filter);

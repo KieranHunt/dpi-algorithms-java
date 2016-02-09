@@ -2,6 +2,7 @@ package casa.kieran;
 
 import casa.kieran.dpi.statistics.OverallStatistics;
 import casa.kieran.dpi.statistics.algorithm.AlgorithmStatisticsGenerator;
+import casa.kieran.dpi.statistics.inputfile.InputFileStatisticsGenerator;
 import casa.kieran.dpi.statistics.testrun.TestRunStatisticsGenerator;
 import casa.kieran.dpi.test.Test;
 import org.joda.time.DateTime;
@@ -44,7 +45,11 @@ public class Main {
         OverallStatistics overallStatistics = AlgorithmStatisticsGenerator
                 .generateAlgorithmStatistics(test.getResults());
 
-        OverallStatistics overallStatistics2 = TestRunStatisticsGenerator.generateTestRunStatistics(test.getResults());
+        OverallStatistics overallStatistics2 = TestRunStatisticsGenerator
+                .generateTestRunStatistics(test.getResults());
+
+        OverallStatistics overallStatistics3 = InputFileStatisticsGenerator
+                .generateInputFileStatistics(test.getResults());
 
         System.out.println("");
 

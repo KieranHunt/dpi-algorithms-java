@@ -6,6 +6,8 @@ import java.util.List;
 
 abstract public class AbstractStatisticsGenerator {
 
+    protected static final String GENERATING_MESSAGE = "Generating statistics for ";
+
     public static Statistics generateStatistics(List<Result> resultList) {
         int count = resultList.size();
 

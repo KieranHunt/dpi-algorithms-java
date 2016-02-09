@@ -10,6 +10,7 @@ import java.util.TreeSet;
 public class Result {
     private Rules rules;
     private Input input;
+    private String inputLocation;
     private Class algorithmClass;
     private Long start;
     private Long end;
@@ -26,6 +27,8 @@ public class Result {
         this.runId = runId;
 
         this.locations = new TreeSet<>();
+
+        inputLocation = input.getLocation();
     }
 
     public void addLocation(Integer location) {
@@ -77,6 +80,10 @@ public class Result {
 
     public String getRunId() {
         return runId;
+    }
+
+    public String getInputLocation() {
+        return inputLocation;
     }
 
     @Override

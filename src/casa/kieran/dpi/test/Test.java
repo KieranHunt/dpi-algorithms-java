@@ -18,7 +18,9 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public class Test {
@@ -33,6 +35,7 @@ public class Test {
     private int times;
 
     private List<String> runIds = new ArrayList<>();
+    private Set<String> testFileLocations = new HashSet<>();
 
     private Results results;
 
@@ -79,6 +82,7 @@ public class Test {
             for (Algorithm algorithm : algorithms) {
                 LOGGER.info("Performing search with " + algorithm + " algorithm");
                 for (Input input : inputs) {
+                    testFileLocations.add(input.getLocation());
                     algorithm.search(input, results, runNumber, runId);
                 }
             }
@@ -204,5 +208,9 @@ public class Test {
 
     public List<String> getRunIds() {
         return runIds;
+    }
+
+    public Set<String> getTestFileLocations() {
+        return testFileLocations;
     }
 }
