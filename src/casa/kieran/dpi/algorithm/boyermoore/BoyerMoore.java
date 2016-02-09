@@ -33,8 +33,8 @@ public class BoyerMoore implements Algorithm {
     }
 
     @Override
-    public void search(Input input, Results results) {
-        Result result = new Result(rules, input, this);
+    public void search(Input input, Results results, int runNumber, String runId) {
+        Result result = new Result(rules, input, this, runNumber, runId);
         result.start();
 
         for (Rule rule :

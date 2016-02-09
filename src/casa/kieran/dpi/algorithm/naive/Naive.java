@@ -34,9 +34,9 @@ public class Naive implements Algorithm {
     }
 
     @Override
-    public void search(Input input, Results results) {
+    public void search(Input input, Results results, int runNumber, String runId) {
 
-        Result result = new Result(this.rules, input, this);
+        Result result = new Result(this.rules, input, this, runNumber, runId);
         result.start();
 
         for (Rule rule :

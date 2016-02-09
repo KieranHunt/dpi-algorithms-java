@@ -13,13 +13,17 @@ public class Result {
     private Class algorithmClass;
     private Long start;
     private Long end;
+    private int runNumber;
+    private String runId;
 
     private SortedSet<Integer> locations;
 
-    public Result(Rules rules, Input input, Algorithm algorithm) {
+    public Result(Rules rules, Input input, Algorithm algorithm, int runNumber, String runId) {
         this.rules = rules;
         this.input = input;
         this.algorithmClass = algorithm.getClass();
+        this.runNumber = runNumber;
+        this.runId = runId;
 
         this.locations = new TreeSet<>();
     }
@@ -31,12 +35,48 @@ public class Result {
         this.locations.add(location);
     }
 
+    public Long getElapsed() {
+        return end - start;
+    }
+
     public void start() {
         this.start = System.nanoTime();
     }
 
     public void end() {
         this.end = System.nanoTime();
+    }
+
+    public Rules getRules() {
+        return rules;
+    }
+
+    public Input getInput() {
+        return input;
+    }
+
+    public Class getAlgorithmClass() {
+        return algorithmClass;
+    }
+
+    public Long getStart() {
+        return start;
+    }
+
+    public Long getEnd() {
+        return end;
+    }
+
+    public int getRunNumber() {
+        return runNumber;
+    }
+
+    public SortedSet<Integer> getLocations() {
+        return locations;
+    }
+
+    public String getRunId() {
+        return runId;
     }
 
     @Override
@@ -47,7 +87,8 @@ public class Result {
         StringBuffer stringBuffer = new StringBuffer();
         this.locations.forEach((location) -> stringBuffer.append(location + " "));
 
-        return String.format("%s,%s,%s,%d nanoseconds,%s\n",
+        return String.format("%s,%s,%s,%s,%d nanoseconds,%s\n",
+                this.runNumber,
                 this.algorithmClass.getSimpleName(),
                 this.rules,
                 this.input, (this.end - this.start),

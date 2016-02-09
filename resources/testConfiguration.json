@@ -1,11 +1,10 @@
 {
   "algorithms": [
     "Naive",
-    "Bitap",
-    "BoyerMoore"
+    "Bitap"
   ],
   "rules": [
-    "o"
+    "google"
   ],
   "inputs": [
     {
@@ -17,5 +16,5 @@
       "location": "resources/tcpdump.pcap"
     }
   ],
-  "times": 2
+  "times": 5
 }

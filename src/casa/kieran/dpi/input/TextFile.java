@@ -42,4 +42,25 @@ public class TextFile implements Input {
     public String toString() {
         return location;
     }
+
+    @Override
+    public String getLocation() {
+        return location;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        TextFile textFile = (TextFile) o;
+
+        return location.equals(textFile.location);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return location.hashCode();
+    }
 }

@@ -51,8 +51,8 @@ public class Trie implements Algorithm {
     }
 
     @Override
-    public void search(Input input, Results results) {
-        Result result = new Result(this.rules, input, this);
+    public void search(Input input, Results results, int runNumber, String runId) {
+        Result result = new Result(this.rules, input, this, runNumber, runId);
         result.start();
         for (int i = 0; i < input.getLength(); i++) {
             List<Byte> searchList = getSublist(input, i, input.getLength());

@@ -17,6 +17,9 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class Test {
 
@@ -28,6 +31,8 @@ public class Test {
     private Rules rules;
     private Inputs inputs;
     private int times;
+
+    private List<String> runIds = new ArrayList<>();
 
     private Results results;
 
@@ -44,7 +49,8 @@ public class Test {
         this.rules = rules;
         this.inputs = inputs;
         this.times = times;
-        results = new Results();
+        results = new Results(this);
+
     }
 
     /**
@@ -60,24 +66,32 @@ public class Test {
         inputs = readInputsFromTestConfiguration(testConfiguration);
         times = readTimesFromTestConfiguration(testConfiguration);
 
-        results = new Results();
+        results = new Results(this);
     }
 
     public void run() {
         LOGGER.info("Starting test");
         for (int run = 0; run < times; run++) {
             int runNumber = run + 1;
-            LOGGER.info("Running test #" + runNumber);
+            String runId = UUID.randomUUID().toString();
+            runIds.add(runId);
+            LOGGER.info("Running test #" + runNumber + " with ID " + runId);
             for (Algorithm algorithm : algorithms) {
                 LOGGER.info("Performing search with " + algorithm + " algorithm");
                 for (Input input : inputs) {
-                    algorithm.search(input, results);
+                    algorithm.search(input, results, runNumber, runId);
                 }
             }
         }
         LOGGER.info("Test complete");
     }
 
+    /**
+     * Read the Rules from a TestConfiguration object
+     *
+     * @param testConfiguration - the object to read the rules from.
+     * @return the rules read from the TestConfiguration object
+     */
     private Rules readRulesFromTestConfiguration(TestConfiguration testConfiguration) {
         LOGGER.info("Checking for rules");
         Rules rules = new Rules();
@@ -89,6 +103,13 @@ public class Test {
         return rules;
     }
 
+    /**
+     * Read the Algorithms from the TestConfiguration object
+     *
+     * @param testConfiguration - the object containing the algorithms
+     * @param rules             - the object containing the rules for the algorithms
+     * @return the algorithms created from the TestConfiguration object
+     */
     private Algorithms readAlgorithmsFromTestConfiguration(TestConfiguration testConfiguration, Rules rules) {
         Algorithms algorithms = new Algorithms();
         LOGGER.info("Checking for algorithms");
@@ -105,6 +126,12 @@ public class Test {
         return algorithms;
     }
 
+    /**
+     * Read the Inputs from the TestConfiguration object
+     *
+     * @param testConfiguration - the test configuration object to read the inputs out of.
+     * @return the Inputs from the TestConfiguration object.
+     */
     private Inputs readInputsFromTestConfiguration(TestConfiguration testConfiguration) {
         Inputs inputs = new Inputs();
         LOGGER.info("Checking for Inputs");
@@ -120,6 +147,12 @@ public class Test {
         return inputs;
     }
 
+    /**
+     * Read the times from the TestConfiguration object
+     *
+     * @param testConfiguration - the TestConfiguration object to have the times read from.
+     * @return the number of times to run the tests, from the TestConfiguration object
+     */
     private int readTimesFromTestConfiguration(TestConfiguration testConfiguration) {
         LOGGER.info("Checking for number of test times");
         int times = times = ((Integer) testConfiguration.getTimes() != null) ? testConfiguration.getTimes() :
@@ -149,7 +182,27 @@ public class Test {
         return null;
     }
 
+    public Algorithms getAlgorithms() {
+        return algorithms;
+    }
+
+    public Rules getRules() {
+        return rules;
+    }
+
+    public Inputs getInputs() {
+        return inputs;
+    }
+
+    public int getTimes() {
+        return times;
+    }
+
     public Results getResults() {
         return results;
+    }
+
+    public List<String> getRunIds() {
+        return runIds;
     }
 }

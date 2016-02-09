@@ -32,7 +32,7 @@ public class Pcap implements Iterable<Input> {
         while (true) {
             try {
                 org.pcap4j.packet.Packet packet = pcapHandle.getNextPacketEx();
-                Packet packetToBeAdded = new Packet(packet);
+                Packet packetToBeAdded = new Packet(packet, pcapLocation);
                 packets.add(packetToBeAdded);
             } catch (NotOpenException | PcapNativeException | EOFException | TimeoutException e) {
                 break;

@@ -26,4 +26,25 @@ public class Text implements Input {
     public String toString() {
         return this.text;
     }
+
+    @Override
+    public String getLocation() {
+        return this.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Text text1 = (Text) o;
+
+        return text.equals(text1.text);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return text.hashCode();
+    }
 }

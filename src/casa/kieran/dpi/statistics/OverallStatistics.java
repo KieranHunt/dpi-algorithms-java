@@ -1,22 +1,35 @@
 package casa.kieran.dpi.statistics;
 
-import casa.kieran.dpi.statistics.Statistics;
-
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class OverallStatistics {
-    private List<Statistics> statisticsList;
 
-    /**
-     * Overall statistics
-     */
-    private int count;
-    private int mix;
-    private int max;
-    private int mean;
-    private int standardDeviation;
+    private Map<Object, Statistics> statisticsMap = new HashMap<>();
+
+    private Statistics overAllStatistics;
 
     public OverallStatistics() {
 
+    }
+
+    public void addStatistics(Object key, Statistics value) {
+        statisticsMap.put(key, value);
+    }
+
+    public Map<Object, Statistics> getStatisticsMap() {
+        return statisticsMap;
+    }
+
+    public void setStatisticsMap(Map<Object, Statistics> statisticsMap) {
+        this.statisticsMap = statisticsMap;
+    }
+
+    public Statistics getOverAllStatistics() {
+        return overAllStatistics;
+    }
+
+    public void setOverAllStatistics(Statistics overAllStatistics) {
+        this.overAllStatistics = overAllStatistics;
     }
 }

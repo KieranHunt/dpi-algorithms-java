@@ -18,7 +18,7 @@ public class InputsFactory {
                 inputs.addInputList(pcap.getAllPackets());
                 break;
             case "text":
-                LOGGER.info("Found text entry at" + inputLocation);
+                LOGGER.info("Found text entry at " + inputLocation);
                 TextFile textFile = new TextFile(inputLocation);
                 inputs.addInput(textFile);
                 break;

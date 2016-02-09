@@ -11,12 +11,19 @@ public interface Input {
      * @param location The location to find the byte at.
      * @return The byte at the given location.
      */
-    public Byte getByte(Integer location);
+    Byte getByte(Integer location);
 
     /**
      * Returns the length of the input
      *
      * @return the length of the input.
      */
-    public Integer getLength();
+    Integer getLength();
+
+    /**
+     * Returns the location of the original input file
+     *
+     * @return a string representing the location of the input
+     */
+    String getLocation();
 }
