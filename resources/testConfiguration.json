@@ -1,15 +1,10 @@
 {
   "algorithms": [
-    "Bitap",
-    "BoyerMoore",
-    "Trie",
-    "KnuthMorrisPratt",
-    "Naive",
-    "AhoCorasick"
+    "MorrisPratt",
+    "KnuthMorrisPratt"
   ],
   "rules": [
-    "google",
-    "good"
+    "google"
   ],
   "inputs": [
     {

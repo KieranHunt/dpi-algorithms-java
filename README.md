@@ -2,11 +2,12 @@
 
 ## Implemented Algorithms
 The following algorithms have been implemented so far (I am roughly following [this guide](http://www-igm.univ-mlv
-.fr/~lecroq/string/index.html) ):
+.fr/~lecroq/string/index.html)):
 
 - Naïve
 - Trie (Deterministic Finite State Automaton)
 - Bitap (Shift Or)
+- Morris-Pratt
 - Knuth-Morris-Pratt
 - Boyer-Moore
 - Aho-Corasick
