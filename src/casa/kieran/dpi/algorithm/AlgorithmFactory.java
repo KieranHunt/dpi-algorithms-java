@@ -6,6 +6,7 @@ import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.algorithm.knuthmorrispratt.KnuthMorrisPratt;
 import casa.kieran.dpi.algorithm.morrispratt.MorrisPratt;
 import casa.kieran.dpi.algorithm.naive.Naive;
+import casa.kieran.dpi.algorithm.simon.Simon;
 import casa.kieran.dpi.algorithm.trie.Trie;
 import casa.kieran.dpi.exception.UnimplementedAlgorithmException;
 import casa.kieran.dpi.rule.Rules;
@@ -45,6 +46,9 @@ public class AlgorithmFactory {
                 break;
             case "AhoCorasick":
                 algorithm = AhoCorasick.getInstance(rules);
+                break;
+            case "Simon":
+                algorithm = Simon.getInstance(rules);
                 break;
             default:
                 LOGGER.error("Unimplemented Algorithm: " + className, new UnimplementedAlgorithmException());

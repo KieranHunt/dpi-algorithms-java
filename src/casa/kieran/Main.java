@@ -54,5 +54,7 @@ public class Main {
         LOGGER.info("------------------------------");
         LOGGER.info("Testing and Analysing Complete");
         LOGGER.info("------------------------------\n");
+
+        System.out.println(test.getResults());
     }
 }

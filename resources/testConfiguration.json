@@ -1,7 +1,7 @@
 {
   "algorithms": [
-    "MorrisPratt",
-    "KnuthMorrisPratt"
+    "Simon",
+    "Naive"
   ],
   "rules": [
     "google"
@@ -12,5 +12,5 @@
       "location": "resources/dns.cap"
     }
   ],
-  "times": 50
+  "times": 1
 }
