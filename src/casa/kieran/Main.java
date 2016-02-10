@@ -1,9 +1,8 @@
 package casa.kieran;
 
 import casa.kieran.dpi.statistics.OverallStatistics;
-import casa.kieran.dpi.statistics.algorithm.AlgorithmStatisticsGenerator;
-import casa.kieran.dpi.statistics.inputfile.InputFileStatisticsGenerator;
-import casa.kieran.dpi.statistics.testrun.TestRunStatisticsGenerator;
+import casa.kieran.dpi.statistics.StatisticsGenerator;
+import casa.kieran.dpi.statistics.writer.StatisticsWriter;
 import casa.kieran.dpi.test.Test;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
@@ -17,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        DateTime start = DateTime.now();
+        DateTime startTests = DateTime.now();
 
         LOGGER.info("------------------------------");
         LOGGER.info("DPI Algorithm Benchmark System");
@@ -27,7 +26,7 @@ public class Main {
         String configurationLocation;
 
         if (args.length == 0) {
-            LOGGER.info("No test configuration location supplied, using default.");
+            LOGGER.warn("No test configuration location supplied, using default.");
             configurationLocation = "resources/testConfiguration.json";
         } else {
             LOGGER.info("Using test configuration found at " + args[0]);
@@ -38,20 +37,23 @@ public class Main {
 
         test.run();
 
-        DateTime end = DateTime.now();
-        Period elapsed = new Period(start, end);
-        LOGGER.info("Total time elapsed: " + elapsed.getSeconds() + "s");
+        DateTime endTests = DateTime.now();
+        Period elapsedTests = new Period(startTests, endTests);
+        LOGGER.info("Total time for tests elapsed: " + elapsedTests.getSeconds() + "s\n");
 
-        OverallStatistics overallStatistics = AlgorithmStatisticsGenerator
-                .generateAlgorithmStatistics(test.getResults());
+        DateTime startStatistics = DateTime.now();
 
-        OverallStatistics overallStatistics2 = TestRunStatisticsGenerator
-                .generateTestRunStatistics(test.getResults());
+        StatisticsGenerator statisticsGenerator = new StatisticsGenerator(test.getResults());
 
-        OverallStatistics overallStatistics3 = InputFileStatisticsGenerator
-                .generateInputFileStatistics(test.getResults());
+        OverallStatistics overallStatistics = statisticsGenerator.generateStatistics();
+        StatisticsWriter.writeStatistics(overallStatistics);
 
-        System.out.println("");
+        DateTime endStatistics = DateTime.now();
+        Period elapsedStatistics = new Period(startStatistics, endStatistics);
+        LOGGER.info("Total time for statistics elapsed: " + elapsedStatistics.getSeconds() + "s\n");
 
+        LOGGER.info("------------------------------");
+        LOGGER.info("Testing and Analysing Complete");
+        LOGGER.info("------------------------------\n");
     }
 }

@@ -1,35 +1,51 @@
 package casa.kieran.dpi.statistics;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class OverallStatistics {
 
-    private Map<Object, Statistics> statisticsMap = new HashMap<>();
+    private Map<String, Statistics> algorithmStatistics;
+    private Map<String, Statistics> testRunStatistics;
+    private Map<String, Statistics> inputFileStatistics;
 
-    private Statistics overAllStatistics;
+    private Statistics overallStatistics;
 
-    public OverallStatistics() {
-
+    public OverallStatistics(Map<String, Statistics> algorithmStatistics, Map<String, Statistics> testRunStatistics, Map<String, Statistics> inputFileStatistics, Statistics overallStatistics) {
+        this.algorithmStatistics = algorithmStatistics;
+        this.testRunStatistics = testRunStatistics;
+        this.inputFileStatistics = inputFileStatistics;
+        this.overallStatistics = overallStatistics;
     }
 
-    public void addStatistics(Object key, Statistics value) {
-        statisticsMap.put(key, value);
+    public Map<String, Statistics> getAlgorithmStatistics() {
+        return algorithmStatistics;
     }
 
-    public Map<Object, Statistics> getStatisticsMap() {
-        return statisticsMap;
+    public void setAlgorithmStatistics(Map<String, Statistics> algorithmStatistics) {
+        this.algorithmStatistics = algorithmStatistics;
     }
 
-    public void setStatisticsMap(Map<Object, Statistics> statisticsMap) {
-        this.statisticsMap = statisticsMap;
+    public Map<String, Statistics> getTestRunStatistics() {
+        return testRunStatistics;
     }
 
-    public Statistics getOverAllStatistics() {
-        return overAllStatistics;
+    public void setTestRunStatistics(Map<String, Statistics> testRunStatistics) {
+        this.testRunStatistics = testRunStatistics;
     }
 
-    public void setOverAllStatistics(Statistics overAllStatistics) {
-        this.overAllStatistics = overAllStatistics;
+    public Map<String, Statistics> getInputFileStatistics() {
+        return inputFileStatistics;
+    }
+
+    public void setInputFileStatistics(Map<String, Statistics> inputFileStatistics) {
+        this.inputFileStatistics = inputFileStatistics;
+    }
+
+    public Statistics getOverallStatistics() {
+        return overallStatistics;
+    }
+
+    public void setOverallStatistics(Statistics overallStatistics) {
+        this.overallStatistics = overallStatistics;
     }
 }

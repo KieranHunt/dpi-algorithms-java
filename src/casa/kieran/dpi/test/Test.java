@@ -76,7 +76,7 @@ public class Test {
         LOGGER.info("Starting test");
         for (int run = 0; run < times; run++) {
             int runNumber = run + 1;
-            String runId = UUID.randomUUID().toString();
+            String runId = generateRunId();
             runIds.add(runId);
             LOGGER.info("Running test #" + runNumber + " with ID " + runId);
             for (Algorithm algorithm : algorithms) {
@@ -88,6 +88,10 @@ public class Test {
             }
         }
         LOGGER.info("Test complete");
+    }
+
+    private String generateRunId() {
+        return UUID.randomUUID().toString().split("-")[4];
     }
 
     /**

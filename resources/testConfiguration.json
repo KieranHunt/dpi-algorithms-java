@@ -1,10 +1,11 @@
 {
   "algorithms": [
-    "Naive",
-    "Bitap"
+    "Bitap",
+    "BoyerMoore"
   ],
   "rules": [
-    "google"
+    "google",
+    "good"
   ],
   "inputs": [
     {
@@ -12,9 +13,9 @@
       "location": "resources/dns.cap"
     },
     {
-      "type": "pcap",
-      "location": "resources/tcpdump.pcap"
+      "type": "text",
+      "location": "resources/alice.txt"
     }
   ],
-  "times": 5
+  "times": 2
 }

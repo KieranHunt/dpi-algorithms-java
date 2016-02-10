@@ -1,0 +1,57 @@
+{
+  "algorithmStatistics": {
+    "Boyer-Moore": {
+      "count": 78,
+      "min": 5786,
+      "max": 23162841793,
+      "mean": 5.81387444E8,
+      "standardDeviation": 3.584337176522674E9
+    },
+    "Bitap": {
+      "count": 78,
+      "min": 16121,
+      "max": 50652692033,
+      "mean": 1.281449843E9,
+      "standardDeviation": 7.8998331324654E9
+    }
+  },
+  "testRunStatistics": {
+    "b48402bf0ef2": {
+      "count": 78,
+      "min": 40035,
+      "max": 49296693731,
+      "mean": 9.29063134E8,
+      "standardDeviation": 6.09682021563275E9
+    },
+    "89f3f557ff51": {
+      "count": 78,
+      "min": 5786,
+      "max": 50652692033,
+      "mean": 9.33774153E8,
+      "standardDeviation": 6.191013839289722E9
+    }
+  },
+  "inputFileStatistics": {
+    "resources/alice.txt": {
+      "count": 4,
+      "min": 22179958046,
+      "max": 50652692033,
+      "mean": 3.63230464E10,
+      "standardDeviation": 1.3664481352430412E10
+    },
+    "resources/dns.cap": {
+      "count": 152,
+      "min": 5786,
+      "max": 471218,
+      "mean": 60018.0,
+      "standardDeviation": 63244.459281551215
+    }
+  },
+  "overallStatistics": {
+    "count": 156,
+    "min": 5786,
+    "max": 50652692033,
+    "mean": 9.31418643E8,
+    "standardDeviation": 6.144097989000373E9
+  }
+}

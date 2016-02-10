@@ -2,23 +2,25 @@ package casa.kieran.dpi.statistics.algorithm;
 
 import casa.kieran.dpi.result.Result;
 import casa.kieran.dpi.result.Results;
-import casa.kieran.dpi.statistics.AbstractStatisticsGenerator;
-import casa.kieran.dpi.statistics.OverallStatistics;
+import casa.kieran.dpi.result.filter.Filter;
+import casa.kieran.dpi.result.filter.ResultsFilterer;
+import casa.kieran.dpi.statistics.AbstractSpecificStatisticsGenerator;
 import casa.kieran.dpi.statistics.Statistics;
-import casa.kieran.dpi.statistics.filter.Filter;
-import casa.kieran.dpi.statistics.filter.ResultsFilterer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class AlgorithmStatisticsGenerator extends AbstractStatisticsGenerator {
+public class AlgorithmStatisticsGenerator extends AbstractSpecificStatisticsGenerator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AlgorithmStatisticsGenerator.class);
 
-    public static OverallStatistics generateAlgorithmStatistics(Results results) {
-        OverallStatistics overallStatistics = new OverallStatistics();
+    @Override
+    public Map<String, Statistics> generateStatisticsMap(Results results) {
+
+        Map<String, Statistics> algorithmStatisticsMap = new HashMap<>();
 
         results.getTest().getAlgorithms().forEach(algorithm -> {
 
@@ -29,17 +31,10 @@ public class AlgorithmStatisticsGenerator extends AbstractStatisticsGenerator {
 
             Statistics statistics = generateStatistics(resultList);
 
-            overallStatistics.addStatistics(algorithm.getClass(), statistics);
+            algorithmStatisticsMap.put(algorithm.toString(), statistics);
 
         });
 
-        List<Result> resultList = new ArrayList<>();
-        resultList.addAll(results.getResults());
-
-        Statistics statistics = generateStatistics(resultList);
-
-        overallStatistics.setOverAllStatistics(statistics);
-
-        return overallStatistics;
+        return algorithmStatisticsMap;
     }
 }

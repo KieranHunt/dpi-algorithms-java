@@ -2,23 +2,25 @@ package casa.kieran.dpi.statistics.inputfile;
 
 import casa.kieran.dpi.result.Result;
 import casa.kieran.dpi.result.Results;
-import casa.kieran.dpi.statistics.AbstractStatisticsGenerator;
-import casa.kieran.dpi.statistics.OverallStatistics;
+import casa.kieran.dpi.result.filter.Filter;
+import casa.kieran.dpi.result.filter.ResultsFilterer;
+import casa.kieran.dpi.statistics.AbstractSpecificStatisticsGenerator;
 import casa.kieran.dpi.statistics.Statistics;
-import casa.kieran.dpi.statistics.filter.Filter;
-import casa.kieran.dpi.statistics.filter.ResultsFilterer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class InputFileStatisticsGenerator extends AbstractStatisticsGenerator {
+public class InputFileStatisticsGenerator extends AbstractSpecificStatisticsGenerator {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(InputFileStatisticsGenerator.class);
 
-    public static OverallStatistics generateInputFileStatistics(Results results) {
-        OverallStatistics overallStatistics = new OverallStatistics();
+    @Override
+    public Map<String, Statistics> generateStatisticsMap(Results results) {
+
+        Map<String, Statistics> inputFileStatisticsMap = new HashMap<>();
 
         results.getTest().getTestFileLocations().forEach(inputFileLocation -> {
 
@@ -29,17 +31,9 @@ public class InputFileStatisticsGenerator extends AbstractStatisticsGenerator {
 
             Statistics statistics = generateStatistics(resultList);
 
-            overallStatistics.addStatistics(inputFileLocation, statistics);
+            inputFileStatisticsMap.put(inputFileLocation, statistics);
         });
 
-        List<Result> resultList = new ArrayList<>();
-        resultList.addAll(results.getResults());
-
-        Statistics statistics = generateStatistics(resultList);
-
-        overallStatistics.setOverAllStatistics(statistics);
-
-        return overallStatistics;
+        return inputFileStatisticsMap;
     }
-
 }

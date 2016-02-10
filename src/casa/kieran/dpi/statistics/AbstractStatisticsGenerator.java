@@ -1,12 +1,20 @@
 package casa.kieran.dpi.statistics;
 
 import casa.kieran.dpi.result.Result;
+import casa.kieran.dpi.result.Results;
 
+import java.util.ArrayList;
 import java.util.List;
 
 abstract public class AbstractStatisticsGenerator {
 
     protected static final String GENERATING_MESSAGE = "Generating statistics for ";
+
+    public static Statistics generateStatistics(Results results) {
+        List<Result> resultList = new ArrayList<>();
+        resultList.addAll(results.getResults());
+        return generateStatistics(resultList);
+    }
 
     public static Statistics generateStatistics(List<Result> resultList) {
         int count = resultList.size();
