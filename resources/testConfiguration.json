@@ -1,7 +1,11 @@
 {
   "algorithms": [
     "Bitap",
-    "BoyerMoore"
+    "BoyerMoore",
+    "Trie",
+    "KnuthMorrisPratt",
+    "Naive",
+    "AhoCorasick"
   ],
   "rules": [
     "google",
@@ -11,10 +15,6 @@
     {
       "type": "pcap",
       "location": "resources/dns.cap"
-    },
-    {
-      "type": "pcap",
-      "location": "resources/tcpdump.pcap"
     }
   ],
   "times": 50

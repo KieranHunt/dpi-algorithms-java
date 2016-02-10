@@ -33,6 +33,11 @@ public class Text implements Input {
     }
 
     @Override
+    public String getString() {
+        return text;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

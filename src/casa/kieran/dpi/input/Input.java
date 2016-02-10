@@ -26,4 +26,11 @@ public interface Input {
      * @return a string representing the location of the input
      */
     String getLocation();
+
+    /**
+     * Returns the entire input as a String
+     *
+     * @return a string representation of the input
+     */
+    String getString();
 }
