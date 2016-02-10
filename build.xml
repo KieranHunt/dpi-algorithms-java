@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="dpi-algorithms-java" default="all">
+  
+  
+  <property file="build.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="lib/ant-javafx.jar"/>
+      <include name="lib/dt.jar"/>
+      <include name="lib/javafx-mx.jar"/>
+      <include name="lib/jconsole.jar"/>
+      <include name="lib/packager.jar"/>
+      <include name="lib/sa-jdi.jar"/>
+      <include name="lib/tools.jar"/>
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.com.fasterxml.jackson.core:jackson-databind:2.7.0.classpath">
+    <pathelement location="${basedir}/lib/jackson-annotations-2.7.0.jar"/>
+    <pathelement location="${basedir}/lib/jackson-core-2.7.0.jar"/>
+    <pathelement location="${basedir}/lib/jackson-databind-2.7.0.jar"/>
+  </path>
+  
+  <path id="library.joda-time:joda-time:2.9.classpath">
+    <pathelement location="${basedir}/lib/joda-time-2.9.jar"/>
+  </path>
+  
+  <path id="library.org.pcap4j:pcap4j-core:1.6.2.classpath">
+    <pathelement location="${basedir}/lib/jna-4.2.1.jar"/>
+    <pathelement location="${basedir}/lib/pcap4j-core-1.6.2.jar"/>
+    <pathelement location="${basedir}/lib/slf4j-api-1.7.12.jar"/>
+  </path>
+  
+  <path id="library.org.slf4j:slf4j-api:1.7.14.classpath">
+    <pathelement location="${basedir}/lib/slf4j-api-1.7.14.jar"/>
+  </path>
+  
+  <path id="library.org.slf4j:slf4j-log4j12:1.7.14.classpath">
+    <pathelement location="${basedir}/lib/log4j-1.2.17.jar"/>
+    <pathelement location="${basedir}/lib/slf4j-api-1.7.14.jar"/>
+    <pathelement location="${basedir}/lib/slf4j-log4j12-1.7.14.jar"/>
+  </path>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module dpi-algorithms-java -->
+  
+  <dirname property="module.dpi-algorithms-java.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.dpi-algorithms-java" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.dpi-algorithms-java" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.dpi-algorithms-java" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.dpi-algorithms-java" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="dpi-algorithms-java.output.dir" value="${module.dpi-algorithms-java.basedir}/out/production/dpi-algorithms-java"/>
+  <property name="dpi-algorithms-java.testoutput.dir" value="${module.dpi-algorithms-java.basedir}/out/test/dpi-algorithms-java"/>
+  
+  <path id="dpi-algorithms-java.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="dpi-algorithms-java.module.production.classpath">
+    <path refid="${module.jdk.classpath.dpi-algorithms-java}"/>
+    <path refid="library.joda-time:joda-time:2.9.classpath"/>
+    <path refid="library.org.pcap4j:pcap4j-core:1.6.2.classpath"/>
+    <path refid="library.org.slf4j:slf4j-log4j12:1.7.14.classpath"/>
+    <path refid="library.org.slf4j:slf4j-api:1.7.14.classpath"/>
+    <path refid="library.com.fasterxml.jackson.core:jackson-databind:2.7.0.classpath"/>
+  </path>
+  
+  <path id="dpi-algorithms-java.runtime.production.module.classpath">
+    <pathelement location="${dpi-algorithms-java.output.dir}"/>
+    <path refid="library.joda-time:joda-time:2.9.classpath"/>
+    <path refid="library.org.pcap4j:pcap4j-core:1.6.2.classpath"/>
+    <path refid="library.org.slf4j:slf4j-log4j12:1.7.14.classpath"/>
+    <path refid="library.org.slf4j:slf4j-api:1.7.14.classpath"/>
+    <path refid="library.com.fasterxml.jackson.core:jackson-databind:2.7.0.classpath"/>
+  </path>
+  
+  <path id="dpi-algorithms-java.module.classpath">
+    <path refid="${module.jdk.classpath.dpi-algorithms-java}"/>
+    <pathelement location="${dpi-algorithms-java.output.dir}"/>
+    <path refid="library.joda-time:joda-time:2.9.classpath"/>
+    <path refid="library.org.pcap4j:pcap4j-core:1.6.2.classpath"/>
+    <path refid="library.org.slf4j:slf4j-log4j12:1.7.14.classpath"/>
+    <path refid="library.org.slf4j:slf4j-api:1.7.14.classpath"/>
+    <path refid="library.com.fasterxml.jackson.core:jackson-databind:2.7.0.classpath"/>
+  </path>
+  
+  <path id="dpi-algorithms-java.runtime.module.classpath">
+    <pathelement location="${dpi-algorithms-java.testoutput.dir}"/>
+    <pathelement location="${dpi-algorithms-java.output.dir}"/>
+    <path refid="library.joda-time:joda-time:2.9.classpath"/>
+    <path refid="library.org.pcap4j:pcap4j-core:1.6.2.classpath"/>
+    <path refid="library.org.slf4j:slf4j-log4j12:1.7.14.classpath"/>
+    <path refid="library.org.slf4j:slf4j-api:1.7.14.classpath"/>
+    <path refid="library.com.fasterxml.jackson.core:jackson-databind:2.7.0.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.dpi-algorithms-java">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.dpi-algorithms-java">
+    <patternset refid="excluded.from.module.dpi-algorithms-java"/>
+  </patternset>
+  
+  <path id="dpi-algorithms-java.module.sourcepath">
+    <dirset dir="${module.dpi-algorithms-java.basedir}">
+      <include name="src"/>
+      <include name="resources"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.dpi-algorithms-java" depends="compile.module.dpi-algorithms-java.production,compile.module.dpi-algorithms-java.tests" description="Compile module dpi-algorithms-java"/>
+  
+  <target name="compile.module.dpi-algorithms-java.production" description="Compile module dpi-algorithms-java; production classes">
+    <mkdir dir="${dpi-algorithms-java.output.dir}"/>
+    <javac destdir="${dpi-algorithms-java.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.dpi-algorithms-java}/javac">
+      <compilerarg line="${compiler.args.dpi-algorithms-java}"/>
+      <bootclasspath refid="dpi-algorithms-java.module.bootclasspath"/>
+      <classpath refid="dpi-algorithms-java.module.production.classpath"/>
+      <src refid="dpi-algorithms-java.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.dpi-algorithms-java"/>
+    </javac>
+    
+    <copy todir="${dpi-algorithms-java.output.dir}">
+      <fileset dir="${module.dpi-algorithms-java.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.dpi-algorithms-java.basedir}/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.dpi-algorithms-java.tests" depends="compile.module.dpi-algorithms-java.production" description="compile module dpi-algorithms-java; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.dpi-algorithms-java" description="cleanup module">
+    <delete dir="${dpi-algorithms-java.output.dir}"/>
+    <delete dir="${dpi-algorithms-java.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.dpi-algorithms-java" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.dpi-algorithms-java" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.dpi-algorithms-java:jar" value="${basedir}/out/artifacts/dpi_algorithms_java_jar"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.dpi-algorithms-java.jar" value="${artifacts.temp.dir}/dpi-algorithms-java.jar"/>
+  </target>
+  
+  <target name="artifact.dpi-algorithms-java:jar" depends="init.artifacts, compile.module.dpi-algorithms-java" description="Build &#39;dpi-algorithms-java:jar&#39; artifact">
+    <property name="artifact.temp.output.dpi-algorithms-java:jar" value="${artifacts.temp.dir}/dpi_algorithms_java_jar"/>
+    <mkdir dir="${artifact.temp.output.dpi-algorithms-java:jar}"/>
+    <jar destfile="${temp.jar.path.dpi-algorithms-java.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${dpi-algorithms-java.output.dir}"/>
+      <zipfileset src="${basedir}/lib/joda-time-2.9.jar"/>
+      <zipfileset src="${basedir}/lib/pcap4j-core-1.6.2.jar"/>
+      <zipfileset src="${basedir}/lib/jna-4.2.1.jar"/>
+      <zipfileset src="${basedir}/lib/slf4j-api-1.7.12.jar"/>
+      <zipfileset src="${basedir}/lib/slf4j-log4j12-1.7.14.jar"/>
+      <zipfileset src="${basedir}/lib/log4j-1.2.17.jar"/>
+      <zipfileset src="${basedir}/lib/jackson-databind-2.7.0.jar"/>
+      <zipfileset src="${basedir}/lib/jackson-core-2.7.0.jar"/>
+      <zipfileset src="${basedir}/lib/jackson-annotations-2.7.0.jar"/>
+    </jar>
+    <copy file="${temp.jar.path.dpi-algorithms-java.jar}" tofile="${artifact.temp.output.dpi-algorithms-java:jar}/dpi-algorithms-java.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.dpi-algorithms-java:jar" description="Build all artifacts">
+    <mkdir dir="${artifact.output.dpi-algorithms-java:jar}"/>
+    <copy todir="${artifact.output.dpi-algorithms-java:jar}">
+      <fileset dir="${artifact.temp.output.dpi-algorithms-java:jar}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

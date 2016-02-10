@@ -21,7 +21,7 @@ public class TestRunStatisticsGenerator extends AbstractSpecificStatisticsGenera
     public Map<String, Statistics> generateStatisticsMap(Results results) {
         Map<String, Statistics> testRunStatisticsMap = new HashMap<>();
 
-        results.getTest().getRunIds().forEach(runId -> {
+        results.getTest().getRunIds().parallelStream().forEach(runId -> {
 
             LOGGER.info(GENERATING_MESSAGE + "runId: " + runId);
 

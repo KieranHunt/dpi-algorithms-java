@@ -18,6 +18,10 @@ public class Algorithms implements Iterable<Algorithm> {
         return algorithms.size();
     }
 
+    public HashSet<Algorithm> getAlgorithms() {
+        return algorithms;
+    }
+
     @Override
     public Iterator<Algorithm> iterator() {
         return this.algorithms.iterator();

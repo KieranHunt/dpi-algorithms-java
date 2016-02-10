@@ -78,7 +78,7 @@ public class Test {
             int runNumber = run + 1;
             String runId = generateRunId();
             runIds.add(runId);
-            LOGGER.info("Running test #" + runNumber + " with ID " + runId);
+            LOGGER.info("Running test " + runNumber + "/" + times + " with ID " + runId);
             for (Algorithm algorithm : algorithms) {
                 LOGGER.info("Performing search with " + algorithm + " algorithm");
                 for (Input input : inputs) {

@@ -40,7 +40,6 @@ public class Main {
         DateTime endTests = DateTime.now();
         Period elapsedTests = new Period(startTests, endTests);
         LOGGER.info("Total time for tests elapsed: " + elapsedTests.getSeconds() + "s\n");
-
         DateTime startStatistics = DateTime.now();
 
         StatisticsGenerator statisticsGenerator = new StatisticsGenerator(test.getResults());

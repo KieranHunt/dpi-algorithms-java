@@ -22,7 +22,7 @@ public class AlgorithmStatisticsGenerator extends AbstractSpecificStatisticsGene
 
         Map<String, Statistics> algorithmStatisticsMap = new HashMap<>();
 
-        results.getTest().getAlgorithms().forEach(algorithm -> {
+        results.getTest().getAlgorithms().getAlgorithms().parallelStream().forEach(algorithm -> {
 
             LOGGER.info(GENERATING_MESSAGE + "algorithm: " + algorithm);
 

@@ -13,9 +13,9 @@
       "location": "resources/dns.cap"
     },
     {
-      "type": "text",
-      "location": "resources/alice.txt"
+      "type": "pcap",
+      "location": "resources/tcpdump.pcap"
     }
   ],
-  "times": 2
+  "times": 50
 }

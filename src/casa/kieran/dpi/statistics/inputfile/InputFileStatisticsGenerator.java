@@ -22,7 +22,7 @@ public class InputFileStatisticsGenerator extends AbstractSpecificStatisticsGene
 
         Map<String, Statistics> inputFileStatisticsMap = new HashMap<>();
 
-        results.getTest().getTestFileLocations().forEach(inputFileLocation -> {
+        results.getTest().getTestFileLocations().parallelStream().forEach(inputFileLocation -> {
 
             LOGGER.info(GENERATING_MESSAGE + "file: " + inputFileLocation);
 
