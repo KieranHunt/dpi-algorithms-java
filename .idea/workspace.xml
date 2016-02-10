@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915f4217-a40c-4c93-a239-ba4da7da6158" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/simon/Simon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dpi-algorithms.log" afterPath="$PROJECT_DIR$/dpi-algorithms.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/testConfiguration.json" afterPath="$PROJECT_DIR$/resources/testConfiguration.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/Main.java" afterPath="$PROJECT_DIR$/src/casa/kieran/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistics.json" afterPath="$PROJECT_DIR$/statistics.json" />
     </list>
     <ignored path="dpi-algorithms-java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,9 +43,21 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21352313">
-              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.2846975">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Simon.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/simon/Simon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -424,7 +429,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ahocorasick-0.3.0-sources.jar!/" />
-    <property name="SearchEverywhereHistoryKey" value="Main&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Ma&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Test&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/test/Test.java&#10;inpu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java&#10;TestRu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java&#10;Algorit&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithms.java&#10;Abs&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java&#10;Resu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Results.java&#10;Resul&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Algor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithm.java" />
+    <property name="SearchEverywhereHistoryKey" value="si&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/simon/Simon.java&#10;Main&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Ma&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Test&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/test/Test.java&#10;inpu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java&#10;TestRu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java&#10;Algorit&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithms.java&#10;Abs&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/AbstractStatisticsGenerator.java&#10;Resu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Results.java&#10;Resul&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Algor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithm.java" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
@@ -896,12 +901,12 @@
       <workItem from="1454932134701" duration="226000" />
       <workItem from="1454932439213" duration="44719000" />
       <workItem from="1455092812993" duration="5173000" />
-      <workItem from="1455098486069" duration="8525000" />
+      <workItem from="1455098486069" duration="8996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141881000" />
+    <option name="totallyTimeSpent" value="142352000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1327,16 +1332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/simon/Simon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2087156">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3956422">
@@ -1365,13 +1360,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/simon/Simon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21352313">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.2846975">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
