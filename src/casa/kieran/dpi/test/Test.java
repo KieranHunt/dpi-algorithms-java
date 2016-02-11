@@ -73,7 +73,13 @@ public class Test {
     }
 
     public void run() {
-        LOGGER.info("Starting test");
+        String message =
+                String.format("Starting test with %s input(s), %s rule(s) and %s algorithm(s). Running %s time(s).",
+                        inputs.getNumberOfInputs(), rules.getNumberOfRules(), algorithms.getNumberOfAlgorithms(), times);
+        LOGGER.info("------------------------------");
+        LOGGER.info("Starting Testing");
+        LOGGER.info("------------------------------\n");
+        LOGGER.info(message);
         for (int run = 0; run < times; run++) {
             int runNumber = run + 1;
             String runId = generateRunId();
@@ -81,7 +87,14 @@ public class Test {
             LOGGER.info("Running test " + runNumber + "/" + times + " with ID " + runId);
             for (Algorithm algorithm : algorithms) {
                 LOGGER.info("Performing search with " + algorithm + " algorithm");
+                String location = "";
                 for (Input input : inputs) {
+
+                    if (input.getLocation() != location) {
+                        location = input.getLocation();
+                        LOGGER.info("Searching through " + location);
+                    }
+
                     testFileLocations.add(input.getLocation());
                     algorithm.search(input, results, runNumber, runId);
                 }
@@ -163,9 +176,9 @@ public class Test {
      */
     private int readTimesFromTestConfiguration(TestConfiguration testConfiguration) {
         LOGGER.info("Checking for number of test times");
-        int times = times = ((Integer) testConfiguration.getTimes() != null) ? testConfiguration.getTimes() :
+        int times = ((Integer) testConfiguration.getTimes() != null) ? testConfiguration.getTimes() :
                 DEFAULT_TEST_TIMES;
-        LOGGER.info("Setting test times to " + times);
+        LOGGER.info("Setting test times to " + times + "\n");
         return times;
     }
 

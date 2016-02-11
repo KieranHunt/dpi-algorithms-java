@@ -1,5 +1,6 @@
 package casa.kieran.dpi.algorithm.simon;
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -7,6 +8,7 @@ import casa.kieran.dpi.result.Results;
 import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -18,7 +20,7 @@ import java.util.Map;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node9.html
  */
-public class Simon implements Algorithm {
+public class Simon extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static Simon instance;
 
@@ -42,7 +44,7 @@ public class Simon implements Algorithm {
         table = new HashMap<>();
         state = new HashMap<>();
 
-        rules.forEach(rule -> {
+        rules.getRules().forEach(rule -> {
 
             int m = rule.getLength();
 
@@ -116,26 +118,51 @@ public class Simon implements Algorithm {
 
         int n = input.getLength();
 
-        rules.forEach(rule -> {
-            int j;
-            int ell;
-            int state;
+        List<Runnable> runnables = new ArrayList<>();
 
-            int m = rule.getLength();
+        for (Rule rule : rules) {
+            Runnable simon = new SimonRunnable(input, result, n, rule);
+            runnables.add(simon);
+        }
 
-            ell = this.state.get(rule);
-
-            for (state = -1, j = 0; j < n; ++j) {
-                state = getTransition(rule, state, table.get(rule), input.getByte(j));
-                if (state >= m - 1) {
-                    result.addLocation(j - m + 1);
-                    state = ell;
-                }
-            }
-        });
+        executeSearch(runnables);
 
         result.end();
         results.addResult(result);
+    }
+
+    private class SimonRunnable implements Runnable {
+
+        Input input;
+        Result result;
+        int n;
+        Rule rule;
+
+        public SimonRunnable(Input input, Result result, int n, Rule rule) {
+            this.input = input;
+            this.result = result;
+            this.n = n;
+            this.rule = rule;
+        }
+
+        @Override
+        public void run() {
+            int j;
+            int ell;
+            int currState;
+
+            int m = rule.getLength();
+
+            ell = state.get(rule);
+
+            for (currState = -1, j = 0; j < n; ++j) {
+                currState = getTransition(rule, currState, table.get(rule), input.getByte(j));
+                if (currState >= m - 1) {
+                    result.addLocation(j - m + 1);
+                    currState = ell;
+                }
+            }
+        }
     }
 
     private class Cell {

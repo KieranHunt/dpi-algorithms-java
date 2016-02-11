@@ -1,5 +1,6 @@
 package casa.kieran.dpi.algorithm.knuthmorrispratt;
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -7,12 +8,11 @@ import casa.kieran.dpi.result.Results;
 import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
-/**
- * Created by kieran on 2015/11/06.
- */
-public class KnuthMorrisPratt implements Algorithm {
+public class KnuthMorrisPratt extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static KnuthMorrisPratt instance;
 
@@ -71,12 +71,42 @@ public class KnuthMorrisPratt implements Algorithm {
         Result result = new Result(this.rules, input, this, runNumber, runId);
         result.start();
 
+        List<Runnable> runnableList = new ArrayList<>();
+
         for (Rule rule :
                 this.rules) {
+            Runnable runnable = new KnuthMorrisPrattRunnable(input, result, rule);
+            runnableList.add(runnable);
+        }
+
+        executeSearch(runnableList);
+
+        result.end();
+        results.addResult(result);
+    }
+
+    @Override
+    public String toString() {
+        return "Knuth-Morris-Pratt";
+    }
+
+    private class KnuthMorrisPrattRunnable implements Runnable {
+        private Input input;
+        private Result result;
+        private Rule rule;
+
+        public KnuthMorrisPrattRunnable(Input input, Result result, Rule rule) {
+            this.input = input;
+            this.result = result;
+            this.rule = rule;
+        }
+
+        @Override
+        public void run() {
             Integer j = 0;
             for (int i = 0; i < input.getLength(); i++) {
                 while (j > 0 && input.getByte(i) != rule.getByte(j)) {
-                    j = this.table.get(rule)[j - 1];
+                    j = table.get(rule)[j - 1];
                 }
                 if (input.getByte(i) == rule.getByte(j)) {
                     j++;
@@ -87,13 +117,5 @@ public class KnuthMorrisPratt implements Algorithm {
                 }
             }
         }
-
-        result.end();
-        results.addResult(result);
-    }
-
-    @Override
-    public String toString() {
-        return "Knuth-Morris-Pratt";
     }
 }

@@ -50,6 +50,9 @@ public class AlgorithmFactory {
             case "Simon":
                 algorithm = Simon.getInstance(rules);
                 break;
+//            case "Colussi":
+//                algorithm = Colussi.getInstance(rules);
+//                break;
             default:
                 LOGGER.error("Unimplemented Algorithm: " + className, new UnimplementedAlgorithmException());
                 throw new UnimplementedAlgorithmException();

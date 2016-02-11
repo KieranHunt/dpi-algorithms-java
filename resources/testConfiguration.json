@@ -1,7 +1,6 @@
 {
   "algorithms": [
-    "Simon",
-    "Naive"
+    "Colussi"
   ],
   "rules": [
     "google"
@@ -10,6 +9,10 @@
     {
       "type": "pcap",
       "location": "resources/dns.cap"
+    },
+    {
+      "type": "pcap",
+      "location": "resources/tcpdump.pcap"
     }
   ],
   "times": 1

@@ -1,5 +1,6 @@
 package casa.kieran.dpi.algorithm.morrispratt;
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -18,7 +19,7 @@ import java.util.Map;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node7.html
  */
-public class MorrisPratt implements Algorithm {
+public class MorrisPratt extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static MorrisPratt instance;
 
@@ -64,8 +65,37 @@ public class MorrisPratt implements Algorithm {
         Result result = new Result(rules, input, this, runNumber, runId);
         result.start();
 
+        List<Runnable> runnables = new ArrayList<>();
+
         rules.forEach(rule -> {
-            List<Integer> table = this.table.get(rule);
+            Runnable runnable = new MorrisPrattRunnable(input, result, rule);
+            runnables.add(runnable);
+        });
+
+        executeSearch(runnables);
+
+        result.end();
+        results.addResult(result);
+    }
+
+    @Override
+    public String toString() {
+        return "Morris-Pratt";
+    }
+
+    private class MorrisPrattRunnable implements Runnable {
+        private Input input;
+        private Result result;
+        private Rule rule;
+
+        public MorrisPrattRunnable(Input input, Result result, Rule rule) {
+            this.input = input;
+            this.result = result;
+            this.rule = rule;
+        }
+
+        public void run() {
+            List<Integer> currTable = table.get(rule);
 
             int n = input.getLength();
             int m = rule.getLength();
@@ -75,23 +105,15 @@ public class MorrisPratt implements Algorithm {
 
             while (j < n) {
                 while (i > -1 && !rule.getByte(i).equals(input.getByte(j))) {
-                    i = table.get(i);
+                    i = currTable.get(i);
                 }
                 i++;
                 j++;
                 if (i >= m) {
                     result.addLocation(j - i);
-                    i = table.get(i);
+                    i = currTable.get(i);
                 }
             }
-        });
-
-        result.end();
-        results.addResult(result);
-    }
-
-    @Override
-    public String toString() {
-        return "Morris-Pratt";
+        }
     }
 }

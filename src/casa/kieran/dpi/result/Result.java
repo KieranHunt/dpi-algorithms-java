@@ -17,7 +17,8 @@ public class Result {
     private int runNumber;
     private String runId;
 
-    private SortedSet<Integer> locations;
+    private SortedSet<Integer> locations = new TreeSet<>();
+    ;
 
     public Result(Rules rules, Input input, Algorithm algorithm, int runNumber, String runId) {
         this.rules = rules;
@@ -25,8 +26,6 @@ public class Result {
         this.algorithmClass = algorithm.getClass();
         this.runNumber = runNumber;
         this.runId = runId;
-
-        this.locations = new TreeSet<>();
 
         inputLocation = input.getLocation();
     }

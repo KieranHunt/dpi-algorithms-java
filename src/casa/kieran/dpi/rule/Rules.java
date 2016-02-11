@@ -18,6 +18,10 @@ public class Rules implements Iterable<Rule> {
         return this.rules.size();
     }
 
+    public HashSet<Rule> getRules() {
+        return rules;
+    }
+
     @Override
     public Iterator<Rule> iterator() {
         return this.rules.iterator();

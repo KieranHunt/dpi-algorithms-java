@@ -1,5 +1,6 @@
 package casa.kieran.dpi.algorithm.boyermoore;
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -7,10 +8,12 @@ import casa.kieran.dpi.result.Results;
 import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
-public class BoyerMoore implements Algorithm {
+public class BoyerMoore extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static final int ALPHABET_SIZE = 256;
 
@@ -37,24 +40,15 @@ public class BoyerMoore implements Algorithm {
         Result result = new Result(rules, input, this, runNumber, runId);
         result.start();
 
+        List<Runnable> runnables = new ArrayList<>();
+
         for (Rule rule :
                 rules) {
-            if (rule.getLength() == 0) {
-                result.addLocation(0);
-            }
-            for (int i = rule.getLength() - 1, j; i < input.getLength(); ) {
-                for (j = rule.getLength() - 1; rule.getByte(j) == input.getByte(i); --i, --j) {
-                    if (j == 0) {
-                        result.addLocation(i);
-                        break;
-                    }
-                }
-                // i += needle.length - j; // For naive method
-                i += Math.max(
-                        offsetTableMap.get(rule)[rule.getLength() - 1 - j],
-                        characterTableMap.get(rule)[input.getByte(i) & 0xFF]);
-            }
+            Runnable runnable = new BoyerMooreRunnable(input, result, rule);
+            runnables.add(runnable);
         }
+
+        executeSearch(runnables);
 
         result.end();
         results.addResult(result);
@@ -117,5 +111,35 @@ public class BoyerMoore implements Algorithm {
     @Override
     public String toString() {
         return "Boyer-Moore";
+    }
+
+    private class BoyerMooreRunnable implements Runnable {
+        private Input input;
+        private Result result;
+        private Rule rule;
+
+        public BoyerMooreRunnable(Input input, Result result, Rule rule) {
+            this.input = input;
+            this.result = result;
+            this.rule = rule;
+        }
+
+        public void run() {
+            if (rule.getLength() == 0) {
+                result.addLocation(0);
+            }
+            for (int i = rule.getLength() - 1, j; i < input.getLength(); ) {
+                for (j = rule.getLength() - 1; rule.getByte(j) == input.getByte(i); --i, --j) {
+                    if (j == 0) {
+                        result.addLocation(i);
+                        break;
+                    }
+                }
+                // i += needle.length - j; // For naive method
+                i += Math.max(
+                        offsetTableMap.get(rule)[rule.getLength() - 1 - j],
+                        characterTableMap.get(rule)[input.getByte(i) & 0xFF]);
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 package casa.kieran.dpi.algorithm.bitap;
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -7,7 +8,10 @@ import casa.kieran.dpi.result.Results;
 import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
-public class Bitap implements Algorithm {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bitap extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static Bitap instance;
 
@@ -28,8 +32,39 @@ public class Bitap implements Algorithm {
 
         Integer textLength = input.getLength();
 
+        List<Runnable> runnables = new ArrayList<>();
+
         for (Rule rule :
                 rules) {
+            Runnable runnable = new BitapRunnable(input, result, textLength, rule);
+            runnables.add(runnable);
+        }
+
+        executeSearch(runnables);
+
+        result.end();
+        results.addResult(result);
+    }
+
+    @Override
+    public String toString() {
+        return "Bitap";
+    }
+
+    private class BitapRunnable implements Runnable {
+        private Input input;
+        private Result result;
+        private Integer textLength;
+        private Rule rule;
+
+        public BitapRunnable(Input input, Result result, Integer textLength, Rule rule) {
+            this.input = input;
+            this.result = result;
+            this.textLength = textLength;
+            this.rule = rule;
+        }
+
+        public void run() {
             Integer ruleLength = rule.getLength();
 
             if (ruleLength == 0) {
@@ -48,12 +83,5 @@ public class Bitap implements Algorithm {
                 }
             }
         }
-        result.end();
-        results.addResult(result);
-    }
-
-    @Override
-    public String toString() {
-        return "Bitap";
     }
 }
