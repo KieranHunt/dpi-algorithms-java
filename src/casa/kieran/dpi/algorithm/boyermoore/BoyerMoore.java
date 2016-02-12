@@ -9,6 +9,7 @@ import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,18 +22,119 @@ public class BoyerMoore extends AbstractParallelizableAlgorithm implements Algor
 
     private Rules rules;
 
-    private Map<Rule, int[]> characterTableMap;
+    private Map<Rule, List<Integer>> preBmBc;
 
-    private Map<Rule, int[]> offsetTableMap;
+    private Map<Rule, List<Integer>> suffixes;
+
+    private Map<Rule, List<Integer>> preBmGs;
 
     public static BoyerMoore getInstance(Rules rules) {
         if (instance == null) {
             instance = new BoyerMoore();
         }
         instance.rules = rules;
-        instance.makeCharacterTable();
-        instance.makeOffsetTable();
+        instance.preBmBc = instance.preBmBc(rules);
+        instance.suffixes = instance.suffixes(rules);
+        instance.preBmGs = instance.preBmGs(rules);
         return instance;
+    }
+
+    public static Map<Rule, List<Integer>> preBmBc(Rules rules) {
+
+        Map<Rule, List<Integer>> preBmBc = new HashMap<>();
+
+        rules.forEach(rule -> {
+
+            List<Integer> bmbc = new ArrayList<>(Collections.nCopies(ALPHABET_SIZE, 0));
+
+            int m = rule.getLength();
+
+            int i;
+
+            for (i = 0; i < ALPHABET_SIZE; i++) {
+                bmbc.set(i, m);
+            }
+            for (i = 0; i < m - 1; ++i) {
+                bmbc.set(rule.getByte(i), m - i - 1);
+            }
+
+            preBmBc.put(rule, bmbc);
+        });
+
+        return preBmBc;
+    }
+
+    public static Map<Rule, List<Integer>> suffixes(Rules rules) {
+        Map<Rule, List<Integer>> suffixes = new HashMap<>();
+
+        rules.forEach(rule -> {
+
+            int m = rule.getLength();
+
+            List<Integer> suff = new ArrayList<>(Collections.nCopies(m, 0));
+
+            int f, g, i;
+
+            f = 0;
+
+            suff.set(m - 1, m);
+            g = m - 1;
+            for (i = m - 2; i >= 0; --i) {
+                if (i > g && suff.get(i + m - 1 - f) < i - g) {
+                    suff.set(i, suff.get(i + m - 1 - f));
+                } else {
+                    if (i < g) {
+                        g = i;
+                    }
+                    f = i;
+                    while (g >= 0 && rule.getByte(g).equals(rule.getByte(g + m - 1 - f))) {
+                        --g;
+                    }
+                    suff.set(i, f - g);
+                }
+            }
+
+            suffixes.put(rule, suff);
+        });
+
+        return suffixes;
+    }
+
+    public static Map<Rule, List<Integer>> preBmGs(Rules rules) {
+        Map<Rule, List<Integer>> preBmGs = new HashMap<>();
+
+        Map<Rule, List<Integer>> suffixes = suffixes(rules);
+
+        rules.forEach(rule -> {
+
+            int m = rule.getLength();
+
+            List<Integer> bmGs = new ArrayList<>(Collections.nCopies(m, 0));
+            List<Integer> suff = suffixes.get(rule);
+
+            int i, j;
+
+            for (i = 0; i < m; ++i) {
+                bmGs.set(i, m);
+            }
+            j = 0;
+            for (i = m - 1; i >= 0; --i) {
+                if (suff.get(i).equals(i + 1)) {
+                    for (; j < m - 1 - i; ++j) {
+                        if (bmGs.get(j).equals(m)) {
+                            bmGs.set(j, m - 1 - i);
+                        }
+                    }
+                }
+            }
+            for (i = 0; i <= m - 2; ++i) {
+                bmGs.set(m - 1 - suff.get(i), m - 1 - i);
+            }
+
+            preBmGs.put(rule, bmGs);
+        });
+
+        return preBmGs;
     }
 
     @Override
@@ -54,59 +156,6 @@ public class BoyerMoore extends AbstractParallelizableAlgorithm implements Algor
         results.addResult(result);
     }
 
-    private void makeCharacterTable() {
-        characterTableMap = new HashMap<>();
-
-        for (Rule rule :
-                rules) {
-            int[] table = new int[ALPHABET_SIZE];
-            for (int i = 0; i < table.length; ++i) {
-                table[i] = rule.getLength();
-            }
-            for (int i = 0; i < rule.getLength() - 1; ++i) {
-                table[rule.getByte(i)] = rule.getLength() - 1 - i;
-            }
-            characterTableMap.put(rule, table);
-        }
-    }
-
-    private void makeOffsetTable() {
-        offsetTableMap = new HashMap<>();
-        for (Rule rule :
-                rules) {
-            int[] table = new int[rule.getLength()];
-            int lastPrefixPosition = rule.getLength();
-            for (int i = rule.getLength() - 1; i >= 0; --i) {
-                if (isPrefix(rule, i + 1)) {
-                    lastPrefixPosition = i + 1;
-                }
-                table[rule.getLength() - 1 - i] = lastPrefixPosition - i + rule.getLength() - 1;
-            }
-            for (int i = 0; i < rule.getLength() - 1; ++i) {
-                int slen = suffixLength(rule, i);
-                table[slen] = rule.getLength() - 1 - i + slen;
-            }
-            offsetTableMap.put(rule, table);
-        }
-    }
-
-    private boolean isPrefix(Rule rule, int p) {
-        for (int i = p, j = 0; i < rule.getLength(); ++i, ++j) {
-            if (rule.getByte(i) != rule.getByte(j)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private int suffixLength(Rule rule, int p) {
-        int len = 0;
-        for (int i = p, j = rule.getLength() - 1;
-             i >= 0 && rule.getByte(i) == rule.getByte(j); --i, --j) {
-            len += 1;
-        }
-        return len;
-    }
 
     @Override
     public String toString() {
@@ -125,20 +174,26 @@ public class BoyerMoore extends AbstractParallelizableAlgorithm implements Algor
         }
 
         public void run() {
-            if (rule.getLength() == 0) {
-                result.addLocation(0);
-            }
-            for (int i = rule.getLength() - 1, j; i < input.getLength(); ) {
-                for (j = rule.getLength() - 1; rule.getByte(j) == input.getByte(i); --i, --j) {
-                    if (j == 0) {
-                        result.addLocation(i);
-                        break;
-                    }
+            List<Integer> bmGs = preBmGs.get(rule);
+            List<Integer> bmBc = preBmBc.get(rule);
+
+            int n = input.getLength();
+            int m = rule.getLength();
+
+            int i, j;
+
+            j = 0;
+            while (j <= n - m) {
+                i = m - 1;
+                while (i >= 0 && rule.getByte(i).equals(input.getByte(i + j))) {
+                    --i;
                 }
-                // i += needle.length - j; // For naive method
-                i += Math.max(
-                        offsetTableMap.get(rule)[rule.getLength() - 1 - j],
-                        characterTableMap.get(rule)[input.getByte(i) & 0xFF]);
+                if (i < 0) {
+                    result.addLocation(j);
+                    j += bmGs.get(0);
+                } else {
+                    j += Math.max(bmGs.get(i), bmBc.get(input.getByte(i + j)) - m + 1 + i);
+                }
             }
         }
     }
