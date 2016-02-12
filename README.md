@@ -16,3 +16,4 @@ and [this too](http://www.dmi.unict.it/~faro/smart/algorithms.php)):
 | 1991 | Apostolico-Crochemore |       Yes      |
 | 1992 |    Bitap (Shift Or)   |       Yes      |
 | 1993 |         Simon         |       Yes      |
+| 1993 |      Not So Naïve     |       Yes      |
