@@ -10,6 +10,7 @@ import casa.kieran.dpi.algorithm.naive.Naive;
 import casa.kieran.dpi.algorithm.notsonaive.NotSoNaive;
 import casa.kieran.dpi.algorithm.simon.Simon;
 import casa.kieran.dpi.algorithm.trie.Trie;
+import casa.kieran.dpi.algorithm.turboboyermoore.TurboBoyerMoore;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.input.Text;
 import casa.kieran.dpi.result.Result;
@@ -51,7 +52,7 @@ public class AlgorithmTest {
     }
 
     @Test
-    public void testSearch() throws Exception {
+    public synchronized void testSearch() throws Exception {
 
         LOGGER.info("Testing search for " + algorithm.getClass().getSimpleName());
 
@@ -94,7 +95,8 @@ public class AlgorithmTest {
                 ApostolicoCrochemore.getInstance(rules),
                 Bitap.getInstance(rules),
                 Simon.getInstance(rules),
-                NotSoNaive.getInstance(rules)
+                NotSoNaive.getInstance(rules),
+                TurboBoyerMoore.getInstance(rules)
         );
     }
 }

@@ -10,6 +10,7 @@ import casa.kieran.dpi.algorithm.naive.Naive;
 import casa.kieran.dpi.algorithm.notsonaive.NotSoNaive;
 import casa.kieran.dpi.algorithm.simon.Simon;
 import casa.kieran.dpi.algorithm.trie.Trie;
+import casa.kieran.dpi.algorithm.turboboyermoore.TurboBoyerMoore;
 import casa.kieran.dpi.exception.UnimplementedAlgorithmException;
 import casa.kieran.dpi.rule.Rules;
 import org.slf4j.Logger;
@@ -57,6 +58,9 @@ public class AlgorithmFactory {
                 break;
             case "NotSoNaive":
                 algorithm = NotSoNaive.getInstance(rules);
+                break;
+            case "TurboBoyerMoore":
+                algorithm = TurboBoyerMoore.getInstance(rules);
                 break;
             default:
                 LOGGER.error("Unimplemented Algorithm: " + className, new UnimplementedAlgorithmException());
