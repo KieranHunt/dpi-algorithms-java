@@ -1,15 +1,12 @@
 {
   "algorithms": [
-    "Colussi"
+    "KnuthMorrisPratt",
+    "Naive"
   ],
   "rules": [
-    "google"
+    "GCAGAGAG"
   ],
   "inputs": [
-    {
-      "type": "pcap",
-      "location": "resources/dns.cap"
-    },
     {
       "type": "pcap",
       "location": "resources/tcpdump.pcap"

@@ -11,6 +11,7 @@ import casa.kieran.dpi.rule.Rules;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class KnuthMorrisPratt extends AbstractParallelizableAlgorithm implements Algorithm {
 
@@ -18,7 +19,7 @@ public class KnuthMorrisPratt extends AbstractParallelizableAlgorithm implements
 
     private Rules rules;
 
-    private HashMap<Rule, Integer[]> table;
+    private Map<Rule, int[]> table;
 
     private KnuthMorrisPratt(Rules rules) {
         this.rules = rules;
@@ -40,23 +41,36 @@ public class KnuthMorrisPratt extends AbstractParallelizableAlgorithm implements
      * @param rules The Rules object containing all of the rules.
      * @return A HashMap of Rule to Integer Array representing the table for each rule.
      */
-    private HashMap<Rule, Integer[]> precompute(Rules rules) {
-        HashMap<Rule, Integer[]> table = new HashMap<>();
+    public static Map<Rule, int[]> precompute(Rules rules) {
+        Map<Rule, int[]> table = new HashMap<>();
         for (Rule rule :
                 rules) {
-            Integer[] ruleTable = new Integer[rule.getLength()];
-            ruleTable[0] = 0;
-            for (int i = 1; i < rule.getLength(); i++) {
-                int j = ruleTable[i - 1];
-                while (j > 0 && rule.getByte(i) != rule.getByte(j)) {
-                    j = ruleTable[j - 1];
+
+            int m = rule.getLength();
+
+            int[] kmpNext = new int[m + 1];
+
+            int i, j;
+
+            i = 0;
+            j = kmpNext[0] = -1;
+            while (i < m) {
+                while (j > -1 && !rule.getByte(i).equals(rule.getByte(j))) {
+                    j = kmpNext[j];
                 }
-                if (rule.getByte(i) == rule.getByte(j)) {
-                    j++;
+                i++;
+                j++;
+                try {
+                    if (rule.getByte(i).equals(rule.getByte(j))) {
+                        kmpNext[i] = kmpNext[j];
+                    } else {
+                        kmpNext[i] = j;
+                    }
+                } catch (RuntimeException e) {
+                    kmpNext[i] = j;
                 }
-                ruleTable[i] = j;
             }
-            table.put(rule, ruleTable);
+            table.put(rule, kmpNext);
         }
         return table;
     }
@@ -103,17 +117,22 @@ public class KnuthMorrisPratt extends AbstractParallelizableAlgorithm implements
 
         @Override
         public void run() {
-            Integer j = 0;
-            for (int i = 0; i < input.getLength(); i++) {
-                while (j > 0 && input.getByte(i) != rule.getByte(j)) {
-                    j = table.get(rule)[j - 1];
+            int i, j;
+
+            int[] kmpNext = table.get(rule);
+            int n = input.getLength();
+            int m = rule.getLength();
+
+            i = j = 0;
+            while (j < n) {
+                while (i > -1 && !rule.getByte(i).equals(input.getByte(j))) {
+                    i = kmpNext[i];
                 }
-                if (input.getByte(i) == rule.getByte(j)) {
-                    j++;
-                    if (j == rule.getLength()) {
-                        result.addLocation(i - j + 1);
-                        j = 0;
-                    }
+                i++;
+                j++;
+                if (i >= m) {
+                    result.addLocation(j - i);
+                    i = kmpNext[i];
                 }
             }
         }

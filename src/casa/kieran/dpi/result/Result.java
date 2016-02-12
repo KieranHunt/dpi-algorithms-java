@@ -4,8 +4,9 @@ import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.rule.Rules;
 
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.concurrent.ConcurrentSkipListSet;
 
 public class Result {
     private Rules rules;
@@ -17,8 +18,7 @@ public class Result {
     private int runNumber;
     private String runId;
 
-    private SortedSet<Integer> locations = new TreeSet<>();
-    ;
+    private Set<Integer> locations = new HashSet<>();
 
     public Result(Rules rules, Input input, Algorithm algorithm, int runNumber, String runId) {
         this.rules = rules;
@@ -73,7 +73,7 @@ public class Result {
         return runNumber;
     }
 
-    public SortedSet<Integer> getLocations() {
+    public Set<Integer> getLocations() {
         return locations;
     }
 

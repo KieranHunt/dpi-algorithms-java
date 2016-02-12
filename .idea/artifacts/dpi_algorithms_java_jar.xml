@@ -13,6 +13,8 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jackson-core-2.7.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jackson-annotations-2.7.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/ahocorasick-0.3.0-sources.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/junit-4.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/mockito-all-1.10.19.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
