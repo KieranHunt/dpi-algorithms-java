@@ -13,6 +13,7 @@ and [this too](http://www.dmi.unict.it/~faro/smart/algorithms.php)):
 | 1975 |      Aho-Corasick     |       No       |
 | 1977 |   Knuth-Morris-Pratt  |       Yes      |
 | 1977 |      Boyer-Moore      |       Yes      |
+| 1986 |  Apostolico-Giancarlo |       Yes      |
 | 1991 | Apostolico-Crochemore |       Yes      |
 | 1992 |    Bitap (Shift Or)   |       Yes      |
 | 1993 |         Simon         |       Yes      |

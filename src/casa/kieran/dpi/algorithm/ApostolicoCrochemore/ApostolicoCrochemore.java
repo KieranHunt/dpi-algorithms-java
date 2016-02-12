@@ -1,4 +1,4 @@
-package casa.kieran.dpi.algorithm.ApostolicoCrochemore;
+package casa.kieran.dpi.algorithm.apostolicocrochemore;
 
 import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
@@ -61,7 +61,7 @@ public class ApostolicoCrochemore extends AbstractParallelizableAlgorithm implem
 
     @Override
     public String toString() {
-        return "ApostolicoCrochemore";
+        return "apostolicocrochemore";
     }
 
     private class ApostolicoCrochemoreRunnable implements Runnable {

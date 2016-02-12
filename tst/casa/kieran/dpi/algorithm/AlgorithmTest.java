@@ -1,7 +1,8 @@
 package casa.kieran.dpi.algorithm;
 
-import casa.kieran.dpi.algorithm.ApostolicoCrochemore.ApostolicoCrochemore;
 import casa.kieran.dpi.algorithm.ahocorasick.AhoCorasick;
+import casa.kieran.dpi.algorithm.apostolicocrochemore.ApostolicoCrochemore;
+import casa.kieran.dpi.algorithm.apostolicogiancarlo.ApostolicoGiancarlo;
 import casa.kieran.dpi.algorithm.bitap.Bitap;
 import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.algorithm.knuthmorrispratt.KnuthMorrisPratt;
@@ -96,7 +97,8 @@ public class AlgorithmTest {
                 Bitap.getInstance(rules),
                 Simon.getInstance(rules),
                 NotSoNaive.getInstance(rules),
-                TurboBoyerMoore.getInstance(rules)
+                TurboBoyerMoore.getInstance(rules),
+                ApostolicoGiancarlo.getInstance(rules)
         );
     }
 }

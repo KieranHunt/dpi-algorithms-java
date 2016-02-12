@@ -97,14 +97,5 @@ public class NotSoNaive extends AbstractParallelizableAlgorithm implements Algor
                 }
             }
         }
-
-        private boolean memcmp(Rule rule, Input input, int i, int j, int n) {
-            for (int k = 0; k < n; k++) {
-                if (!input.getByte(j + k).equals(rule.getByte(i + k))) {
-                    return false;
-                }
-            }
-            return true;
-        }
     }
 }

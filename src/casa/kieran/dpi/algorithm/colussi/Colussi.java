@@ -37,7 +37,7 @@ public class Colussi implements Algorithm {
             int k;
             int nd;
             int q;
-            int r;
+            int r = 0;
             int s;
 
             List<Integer> hmax = new ArrayList<>(Collections.nCopies(m, 0));
@@ -80,7 +80,7 @@ public class Colussi implements Algorithm {
                     r = i + 1;
                 }
                 if (kmin.get(i) == 0) {
-//                    rmin.set(i, r);
+                    rmin.set(i, r);
                 } else {
                     rmin.set(i, 0);
                 }
