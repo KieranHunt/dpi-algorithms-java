@@ -47,6 +47,19 @@ public class Colussi extends AbstractParallelizableAlgorithm implements Algorith
         preSHIFT = new HashMap<>();
         preND = new HashMap<>();
 
+        preColussi(rules, preH, preNEXT, preSHIFT, preND);
+    }
+
+    @Override
+    public String toString() {
+        return "Colussi";
+    }
+
+    public static void preColussi(Rules rules,
+                                  Map<Rule, List<Integer>> preH,
+                                  Map<Rule, List<Integer>> preNEXT,
+                                  Map<Rule, List<Integer>> preSHIFT,
+                                  Map<Rule, Integer> preND) {
         rules.forEach(rule -> {
 
             int m = rule.getLength();

@@ -16,6 +16,7 @@ and [this too](http://www.dmi.unict.it/~faro/smart/algorithms.php)):
 | 1986 |  Apostolico-Giancarlo |       Yes      |
 | 1991 | Apostolico-Crochemore |       Yes      |
 | 1991 |        Colussi        |       Yes      |
+| 1992 |    Galil-Giancarlo    |       Yes      |
 | 1992 |    Bitap (Shift Or)   |       Yes      |
 | 1993 |         Simon         |       Yes      |
 | 1993 |      Not So Naïve     |       Yes      |
