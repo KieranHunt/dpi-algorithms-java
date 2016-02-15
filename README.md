@@ -15,6 +15,7 @@ and [this too](http://www.dmi.unict.it/~faro/smart/algorithms.php)):
 | 1977 |      Boyer-Moore      |       Yes      |
 | 1980 |        Horspool       |       Yes      |
 | 1986 |  Apostolico-Giancarlo |       Yes      |
+| 1987 |       Rabin-Karp      |       Yes      |
 | 1987 |      Zhu-Takaoka      |       Yes      |
 | 1991 | Apostolico-Crochemore |       Yes      |
 | 1991 |        Colussi        |       Yes      |

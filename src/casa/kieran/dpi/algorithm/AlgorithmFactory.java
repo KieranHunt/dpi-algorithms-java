@@ -12,6 +12,7 @@ import casa.kieran.dpi.algorithm.knuthmorrispratt.KnuthMorrisPratt;
 import casa.kieran.dpi.algorithm.morrispratt.MorrisPratt;
 import casa.kieran.dpi.algorithm.naive.Naive;
 import casa.kieran.dpi.algorithm.notsonaive.NotSoNaive;
+import casa.kieran.dpi.algorithm.rabinkarp.RabinKarp;
 import casa.kieran.dpi.algorithm.reversecolussi.ReverseColussi;
 import casa.kieran.dpi.algorithm.simon.Simon;
 import casa.kieran.dpi.algorithm.trie.Trie;
@@ -85,6 +86,9 @@ public class AlgorithmFactory {
                 break;
             case "ZhuTakaoka":
                 algorithm = ZhuTakaoka.getInstance(rules);
+                break;
+            case "RabinKarp":
+                algorithm = RabinKarp.getInstance(rules);
                 break;
             default:
                 LOGGER.error("Unimplemented Algorithm: " + className, new UnimplementedAlgorithmException());
