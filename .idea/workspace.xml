@@ -78,8 +78,8 @@
       <file leaf-file-name="ReverseColussi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/reversecolussi/ReverseColussi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43233946">
-              <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.70527524">
+              <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1084,7 +1084,7 @@
       <workItem from="1454932134701" duration="226000" />
       <workItem from="1454932439213" duration="44719000" />
       <workItem from="1455092812993" duration="5173000" />
-      <workItem from="1455098486069" duration="79696000" />
+      <workItem from="1455098486069" duration="80057000" />
     </task>
     <servers />
   </component>
@@ -1121,7 +1121,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213052000" />
+    <option name="totallyTimeSpent" value="213413000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1625,8 +1625,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/reversecolussi/ReverseColussi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43233946">
-          <caret line="200" column="0" selection-start-line="200" selection-start-column="0" selection-end-line="200" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.70527524">
+          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

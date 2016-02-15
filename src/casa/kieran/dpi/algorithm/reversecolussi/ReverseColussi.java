@@ -41,6 +41,11 @@ public class ReverseColussi extends AbstractParallelizableAlgorithm implements A
         return instance;
     }
 
+    @Override
+    public String toString() {
+        return "ReverseColussi";
+    }
+
     private void changeRules(Rules rules) {
 
         this.rules = rules;
@@ -157,11 +162,6 @@ public class ReverseColussi extends AbstractParallelizableAlgorithm implements A
     }
 
     @Override
-    public String toString() {
-        return "ReverseColussi";
-    }
-
-    @Override
     public void search(Input input, Results results, int runNumber, String runId) {
         Result result = new Result(rules, input, this, runNumber, runId);
         result.start();
@@ -192,11 +192,6 @@ public class ReverseColussi extends AbstractParallelizableAlgorithm implements A
             this.result = result;
             this.n = n;
             this.rule = rule;
-        }
-
-        @Override
-        public String toString() {
-            return "ReverseColussiRunnable";
         }
 
         public void run() {
