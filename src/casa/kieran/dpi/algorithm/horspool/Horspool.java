@@ -1,18 +1,18 @@
 package casa.kieran.dpi.algorithm.horspool;
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
 import casa.kieran.dpi.result.Results;
 import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Horspool implements Algorithm {
+public class Horspool extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static final int ALPHABET_SIZE = 256;
 
@@ -20,7 +20,7 @@ public class Horspool implements Algorithm {
 
     private Rules rules;
 
-    private Map<Rule, List<Integer>> table;
+    private Map<Rule, List<Integer>> preBMBC;
 
     public static Horspool getInstance(Rules rules) {
         if (instance == null) {
@@ -34,24 +34,7 @@ public class Horspool implements Algorithm {
 
         this.rules = rules;
 
-        table = new HashMap<>();
-
-        rules.forEach(rule -> {
-
-            int m = rule.getLength();
-
-            List<Integer> positions = new ArrayList<>(ALPHABET_SIZE);
-
-            int i;
-
-            for (i = 0; i < ALPHABET_SIZE; ++i) {
-                positions.set(i, m);
-            }
-            for (i = 0; i < m - 1; ++i) {
-                positions.set(rule.getByte(i), m - i - 1);
-            }
-            table.put(rule, positions);
-        });
+        preBMBC = BoyerMoore.preBmBc(rules);
     }
 
 
@@ -60,8 +43,32 @@ public class Horspool implements Algorithm {
         Result result = new Result(rules, input, this, runNumber, runId);
         result.start();
 
-        rules.forEach(rule -> {
+        int n = input.getLength();
 
+        rules.forEach(rule -> {
+            int j;
+            byte c;
+
+            List<Integer> bmBc = preBMBC.get(rule);
+
+            int m = rule.getLength();
+
+            j = 0;
+            while (j <= n - m) {
+                c = input.getByte(j + m - 1);
+                if (rule.getByte(m - 1).equals(c) && memcmp(rule, input, 0, j, m - 1)) {
+                    result.addLocation(j);
+                }
+                j += bmBc.get(c);
+            }
         });
+
+        result.end();
+        results.addResult(result);
+    }
+
+    @Override
+    public String toString() {
+        return "Horspool";
     }
 }

@@ -7,6 +7,7 @@ import casa.kieran.dpi.algorithm.bitap.Bitap;
 import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.algorithm.colussi.Colussi;
 import casa.kieran.dpi.algorithm.galilgiancarlo.GalilGiancarlo;
+import casa.kieran.dpi.algorithm.horspool.Horspool;
 import casa.kieran.dpi.algorithm.knuthmorrispratt.KnuthMorrisPratt;
 import casa.kieran.dpi.algorithm.morrispratt.MorrisPratt;
 import casa.kieran.dpi.algorithm.naive.Naive;
@@ -104,7 +105,8 @@ public class AlgorithmTest {
                 ApostolicoGiancarlo.getInstance(rules),
                 Colussi.getInstance(rules),
                 GalilGiancarlo.getInstance(rules),
-                ReverseColussi.getInstance(rules)
+                ReverseColussi.getInstance(rules),
+                Horspool.getInstance(rules)
         );
     }
 }
