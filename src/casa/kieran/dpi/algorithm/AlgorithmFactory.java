@@ -5,6 +5,7 @@ import casa.kieran.dpi.algorithm.apostolicocrochemore.ApostolicoCrochemore;
 import casa.kieran.dpi.algorithm.apostolicogiancarlo.ApostolicoGiancarlo;
 import casa.kieran.dpi.algorithm.bitap.Bitap;
 import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
+import casa.kieran.dpi.algorithm.colussi.Colussi;
 import casa.kieran.dpi.algorithm.knuthmorrispratt.KnuthMorrisPratt;
 import casa.kieran.dpi.algorithm.morrispratt.MorrisPratt;
 import casa.kieran.dpi.algorithm.naive.Naive;
@@ -54,7 +55,7 @@ public class AlgorithmFactory {
             case "Simon":
                 algorithm = Simon.getInstance(rules);
                 break;
-            case "apostolicocrochemore":
+            case "ApostolicoCrochemore":
                 algorithm = ApostolicoCrochemore.getInstance(rules);
                 break;
             case "NotSoNaive":
@@ -65,6 +66,9 @@ public class AlgorithmFactory {
                 break;
             case "ApostolicoGiancarlo":
                 algorithm = ApostolicoGiancarlo.getInstance(rules);
+                break;
+            case "Colussi":
+                algorithm = Colussi.getInstance(rules);
                 break;
             default:
                 LOGGER.error("Unimplemented Algorithm: " + className, new UnimplementedAlgorithmException());
