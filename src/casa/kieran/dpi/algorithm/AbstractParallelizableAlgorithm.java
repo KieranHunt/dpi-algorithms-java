@@ -12,6 +12,8 @@ abstract public class AbstractParallelizableAlgorithm {
 
     private static final int DEFAULT_THREAD_POOL_SIZE = 10;
 
+    public static final int ALPHABET_SIZE = 256;
+
     protected void executeSearch(List<Runnable> runnableList) {
 
         ExecutorService executorService = Executors.newFixedThreadPool(DEFAULT_THREAD_POOL_SIZE);

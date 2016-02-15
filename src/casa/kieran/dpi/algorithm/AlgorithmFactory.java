@@ -16,6 +16,7 @@ import casa.kieran.dpi.algorithm.reversecolussi.ReverseColussi;
 import casa.kieran.dpi.algorithm.simon.Simon;
 import casa.kieran.dpi.algorithm.trie.Trie;
 import casa.kieran.dpi.algorithm.turboboyermoore.TurboBoyerMoore;
+import casa.kieran.dpi.algorithm.zhutakaoka.ZhuTakaoka;
 import casa.kieran.dpi.exception.UnimplementedAlgorithmException;
 import casa.kieran.dpi.rule.Rules;
 import org.slf4j.Logger;
@@ -81,6 +82,9 @@ public class AlgorithmFactory {
                 break;
             case "Horspool":
                 algorithm = Horspool.getInstance(rules);
+                break;
+            case "ZhuTakaoka":
+                algorithm = ZhuTakaoka.getInstance(rules);
                 break;
             default:
                 LOGGER.error("Unimplemented Algorithm: " + className, new UnimplementedAlgorithmException());

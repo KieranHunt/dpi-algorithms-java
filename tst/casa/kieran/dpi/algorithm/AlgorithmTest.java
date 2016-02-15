@@ -16,6 +16,7 @@ import casa.kieran.dpi.algorithm.reversecolussi.ReverseColussi;
 import casa.kieran.dpi.algorithm.simon.Simon;
 import casa.kieran.dpi.algorithm.trie.Trie;
 import casa.kieran.dpi.algorithm.turboboyermoore.TurboBoyerMoore;
+import casa.kieran.dpi.algorithm.zhutakaoka.ZhuTakaoka;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.input.Text;
 import casa.kieran.dpi.result.Result;
@@ -106,7 +107,8 @@ public class AlgorithmTest {
                 Colussi.getInstance(rules),
                 GalilGiancarlo.getInstance(rules),
                 ReverseColussi.getInstance(rules),
-                Horspool.getInstance(rules)
+                Horspool.getInstance(rules),
+                ZhuTakaoka.getInstance(rules)
         );
     }
 }
