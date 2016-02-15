@@ -11,6 +11,7 @@ import casa.kieran.dpi.algorithm.knuthmorrispratt.KnuthMorrisPratt;
 import casa.kieran.dpi.algorithm.morrispratt.MorrisPratt;
 import casa.kieran.dpi.algorithm.naive.Naive;
 import casa.kieran.dpi.algorithm.notsonaive.NotSoNaive;
+import casa.kieran.dpi.algorithm.reversecolussi.ReverseColussi;
 import casa.kieran.dpi.algorithm.simon.Simon;
 import casa.kieran.dpi.algorithm.trie.Trie;
 import casa.kieran.dpi.algorithm.turboboyermoore.TurboBoyerMoore;
@@ -102,7 +103,8 @@ public class AlgorithmTest {
                 TurboBoyerMoore.getInstance(rules),
                 ApostolicoGiancarlo.getInstance(rules),
                 Colussi.getInstance(rules),
-                GalilGiancarlo.getInstance(rules)
+                GalilGiancarlo.getInstance(rules),
+                ReverseColussi.getInstance(rules)
         );
     }
 }
