@@ -48,7 +48,7 @@ public class Main {
 
         OverallStatistics overallStatistics = statisticsGenerator.generateStatistics();
         StatisticsWriter.writeStatistics(test, overallStatistics,
-                String.format("statistics-%s.json", test.getTestId()));
+                String.format("results/statistics-%s.json", test.getTestId()));
 
         DateTime endStatistics = DateTime.now();
         Period elapsedStatistics = new Period(startStatistics, endStatistics);
@@ -59,6 +59,6 @@ public class Main {
         LOGGER.info("------------------------------\n");
 
         Results results = test.getResults();
-        PrintableResultsFactory.printResults(String.format("raw-results-%s.json", test.getTestId()), test);
+        PrintableResultsFactory.printResults(String.format("results/raw-results-%s.json", test.getTestId()), test);
     }
 }
