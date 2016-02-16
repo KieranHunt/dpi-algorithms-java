@@ -1,7 +1,6 @@
 package casa.kieran.dpi.algorithm.colussi;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
 import casa.kieran.dpi.result.Results;
@@ -19,7 +18,7 @@ import java.util.Map;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node10.html
  */
-public class Colussi extends AbstractParallelizableAlgorithm implements Algorithm {
+public class Colussi extends AbstractAlgorithm {
 
     private static Colussi instance;
 

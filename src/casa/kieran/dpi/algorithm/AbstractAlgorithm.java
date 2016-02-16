@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-abstract public class AbstractParallelizableAlgorithm {
+abstract public class AbstractAlgorithm implements Algorithm {
 
     private static final int DEFAULT_THREAD_POOL_SIZE = 10;
 

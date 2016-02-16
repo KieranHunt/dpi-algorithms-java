@@ -1,6 +1,6 @@
 package casa.kieran.dpi.algorithm.naive;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Naive extends AbstractParallelizableAlgorithm implements Algorithm {
+public class Naive extends AbstractAlgorithm implements Algorithm {
 
     Logger LOGGER = LoggerFactory.getLogger(Naive.class);
 

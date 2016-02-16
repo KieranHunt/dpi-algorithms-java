@@ -1,6 +1,6 @@
 package casa.kieran.dpi.algorithm.turboboyermoore;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.input.Input;
@@ -18,7 +18,7 @@ import java.util.Map;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node15.html
  */
-public class TurboBoyerMoore extends AbstractParallelizableAlgorithm implements Algorithm {
+public class TurboBoyerMoore extends AbstractAlgorithm implements Algorithm {
     private static TurboBoyerMoore instance;
 
     private Rules rules;

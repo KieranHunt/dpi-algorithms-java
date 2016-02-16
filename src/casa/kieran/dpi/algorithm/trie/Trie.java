@@ -1,6 +1,6 @@
 package casa.kieran.dpi.algorithm.trie;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by kieran on 2015/11/10.
  */
-public class Trie extends AbstractParallelizableAlgorithm implements Algorithm {
+public class Trie extends AbstractAlgorithm implements Algorithm {
 
     private static Trie instance;
 

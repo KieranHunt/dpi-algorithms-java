@@ -1,7 +1,6 @@
 package casa.kieran.dpi.algorithm.boyermoore;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
 import casa.kieran.dpi.result.Results;
@@ -14,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class BoyerMoore extends AbstractParallelizableAlgorithm implements Algorithm {
+public class BoyerMoore extends AbstractAlgorithm {
 
     private static final int ALPHABET_SIZE = 256;
 

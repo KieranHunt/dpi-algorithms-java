@@ -1,6 +1,6 @@
 package casa.kieran.dpi.algorithm.simon;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -20,7 +20,7 @@ import java.util.Map;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node9.html
  */
-public class Simon extends AbstractParallelizableAlgorithm implements Algorithm {
+public class Simon extends AbstractAlgorithm implements Algorithm {
 
     private static Simon instance;
 

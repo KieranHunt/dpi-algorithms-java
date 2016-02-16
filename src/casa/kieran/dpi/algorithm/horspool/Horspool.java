@@ -1,7 +1,6 @@
 package casa.kieran.dpi.algorithm.horspool;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -12,7 +11,7 @@ import casa.kieran.dpi.rule.Rules;
 import java.util.List;
 import java.util.Map;
 
-public class Horspool extends AbstractParallelizableAlgorithm implements Algorithm {
+public class Horspool extends AbstractAlgorithm {
 
     private static final int ALPHABET_SIZE = 256;
 

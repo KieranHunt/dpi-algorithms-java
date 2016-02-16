@@ -1,7 +1,6 @@
 package casa.kieran.dpi.algorithm.rabinkarp;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
 import casa.kieran.dpi.result.Results;
@@ -18,7 +17,7 @@ import java.util.Random;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node5.html#SECTION0050
  */
-public class RabinKarp extends AbstractParallelizableAlgorithm implements Algorithm {
+public class RabinKarp extends AbstractAlgorithm {
 
     private static RabinKarp instance;
 

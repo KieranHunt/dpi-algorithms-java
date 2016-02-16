@@ -1,8 +1,7 @@
 package casa.kieran.dpi.algorithm.ahocorasick;
 
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
 import casa.kieran.dpi.result.Results;
@@ -14,7 +13,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class AhoCorasick extends AbstractParallelizableAlgorithm implements Algorithm {
+public class AhoCorasick extends AbstractAlgorithm {
 
     private static AhoCorasick instance;
 

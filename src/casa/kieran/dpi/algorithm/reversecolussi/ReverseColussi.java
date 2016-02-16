@@ -1,6 +1,6 @@
 package casa.kieran.dpi.algorithm.reversecolussi;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -19,7 +19,7 @@ import java.util.Map;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node17.html
  */
-public class ReverseColussi extends AbstractParallelizableAlgorithm implements Algorithm {
+public class ReverseColussi extends AbstractAlgorithm implements Algorithm {
 
     private static final int ALPHABET_SIZE = 256;
 

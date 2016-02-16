@@ -1,7 +1,6 @@
 package casa.kieran.dpi.algorithm.apostolicocrochemore;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.knuthmorrispratt.KnuthMorrisPratt;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -18,7 +17,7 @@ import java.util.Map;
  * <p>
  * Source: http://www-igm.univ-mlv.fr/~lecroq/string/node12.html#SECTION00120
  */
-public class ApostolicoCrochemore extends AbstractParallelizableAlgorithm implements Algorithm {
+public class ApostolicoCrochemore extends AbstractAlgorithm {
 
     private static ApostolicoCrochemore instance;
 

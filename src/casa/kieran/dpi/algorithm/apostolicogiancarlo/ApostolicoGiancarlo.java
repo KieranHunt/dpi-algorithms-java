@@ -1,7 +1,6 @@
 package casa.kieran.dpi.algorithm.apostolicogiancarlo;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -15,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ApostolicoGiancarlo extends AbstractParallelizableAlgorithm implements Algorithm {
+public class ApostolicoGiancarlo extends AbstractAlgorithm {
     private static ApostolicoGiancarlo instance;
 
     private Rules rules;

@@ -1,6 +1,6 @@
 package casa.kieran.dpi.algorithm.zhutakaoka;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.algorithm.boyermoore.BoyerMoore;
 import casa.kieran.dpi.input.Input;
@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ZhuTakaoka extends AbstractParallelizableAlgorithm implements Algorithm {
+public class ZhuTakaoka extends AbstractAlgorithm implements Algorithm {
 
     private static ZhuTakaoka instance;
 

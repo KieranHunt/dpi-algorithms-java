@@ -1,6 +1,6 @@
 package casa.kieran.dpi.algorithm.notsonaive;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -11,7 +11,7 @@ import casa.kieran.dpi.rule.Rules;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotSoNaive extends AbstractParallelizableAlgorithm implements Algorithm {
+public class NotSoNaive extends AbstractAlgorithm implements Algorithm {
 
     private static NotSoNaive instance;
 

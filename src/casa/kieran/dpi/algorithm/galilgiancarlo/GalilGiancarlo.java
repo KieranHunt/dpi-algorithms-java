@@ -1,7 +1,6 @@
 package casa.kieran.dpi.algorithm.galilgiancarlo;
 
-import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
-import casa.kieran.dpi.algorithm.Algorithm;
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.colussi.Colussi;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -14,7 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class GalilGiancarlo extends AbstractParallelizableAlgorithm implements Algorithm {
+public class GalilGiancarlo extends AbstractAlgorithm {
     private static GalilGiancarlo instance;
 
     private Rules rules;
