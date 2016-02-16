@@ -18,8 +18,10 @@ and [this too](http://www.dmi.unict.it/~faro/smart/algorithms.php)):
 | 1987 |       Rabin-Karp      |       Yes      |
 | 1987 |      Zhu-Takaoka      |       Yes      |
 | 1990 |      Quick Search     |       Yes      |
+| 1991 |         Smith         |       Yes      |
 | 1991 | Apostolico-Crochemore |       Yes      |
 | 1991 |        Colussi        |       Yes      |
+| 1992 |         Raita         |       Yes      |
 | 1992 |    Galil-Giancarlo    |       Yes      |
 | 1992 |    Bitap (Shift Or)   |       Yes      |
 | 1993 |         Simon         |       Yes      |
