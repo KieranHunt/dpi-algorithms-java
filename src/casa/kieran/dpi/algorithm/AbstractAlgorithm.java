@@ -54,7 +54,13 @@ abstract public class AbstractAlgorithm implements Algorithm {
 
     public void memset(List<Integer> input, int from, int to, int value) {
         for (int i = from; i < to; i++) {
-            input.set(i, value);
+            if (input.size() == i) {
+                input.add(value);
+            } else if (input.size() > i) {
+                input.set(i, value);
+            } else {
+                throw new RuntimeException("Incorrect start value");
+            }
         }
     }
 

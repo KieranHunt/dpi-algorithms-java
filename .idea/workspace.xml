@@ -7,8 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="915f4217-a40c-4c93-a239-ba4da7da6158" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/optimalmismatch/OptimalMismatch.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/smith/Smith.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dpi-algorithms.log" afterPath="$PROJECT_DIR$/dpi-algorithms.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java" afterPath="$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java" />
     </list>
     <ignored path="dpi-algorithms-java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,15 +42,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49822065">
+            <state vertical-scroll-proportion="-14.4827585">
               <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractAlgorithm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Smith.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/smith/Smith.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8504983">
+              <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/quicksearch/QuickSearch.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
+              <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+              <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -77,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
+              <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -106,9 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/util/Arrays.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/util/concurrent/locks/AbstractQueuedSynchronizer.java" />
-        <option value="/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/lang/Byte.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/knuthmorrispratt/KnuthMorrisPrattTest.groovy" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/ApostolicoCrochemore/ApostolicoCrochemore.java" />
         <option value="$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/ApostolicoCrochemore/ApostolicoCrochemoreTest.java" />
@@ -134,7 +159,6 @@
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/apostolicocrochemore/ApostolicoCrochemore.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/morrispratt/MorrisPratt.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/test/TestConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/horspool/Horspool.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/result/PrintableResults.java" />
         <option value="$USER_HOME$/Downloads/statistics.json" />
@@ -152,11 +176,15 @@
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/statistics/writer/StatisticsWriter.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/Main.java" />
         <option value="$PROJECT_DIR$/results/raw-results-27c87882.json" />
-        <option value="$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/quicksearch/QuickSearch.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" />
         <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/optimalmismatch/OptimalMismatch.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/maximalshift/MaximalShift.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/tunedboyermoore/TunedBoyerMoore.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" />
+        <option value="$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java" />
+        <option value="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/smith/Smith.java" />
       </list>
     </option>
   </component>
@@ -429,7 +457,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="quicksearch" />
+              <option name="myItemId" value="smith" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -465,7 +493,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/ahocorasick-0.3.0.jar!/" />
-    <property name="SearchEverywhereHistoryKey" value="Algo&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java&#10;Read&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/README.md&#10;Test&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java&#10;BoyerM&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java&#10;Result&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Pac&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/input/Packet.java&#10;Inp&#9;PSI&#9;JAVA://casa.kieran.dpi.input.Input&#10;sta&#9;PSI&#9;JAVA://casa.kieran.dpi.statistics.StatisticsGenerator&#10;Main&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Ma&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/lang/Math.java&#10;Horsp&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/horspool/Horspool.java&#10;Aho&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/ahocorasick/AhoCorasick.java&#10;Trie&#9;PSI&#9;JAVA://casa.kieran.dpi.algorithm.trie.Trie&#10;Zh&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/zhutakaoka/ZhuTakaoka.java&#10;Not&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/notsonaive/NotSoNaive.java&#10;Boye&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java&#10;Boyer&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java&#10;Coluss&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/colussi/Colussi.java&#10;Col&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/colussi/Colussi.java&#10;NotS&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/notsonaive/NotSoNaive.java&#10;Abs&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/AbstractParallelizableAlgorithm.java&#10;para&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/AbstractParallelizableAlgorithm.java&#10;Filte&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/filter/Filter.java&#10;Filt&#9;PSI&#9;JAVA://casa.kieran.dpi.result.filter.ResultsFilterer&#10;Apos&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/ApostolicoCrochemore/ApostolicoCrochemore.java&#10;Rule&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/rule/Rule.java&#10;Apo&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/ApostolicoCrochemore/ApostolicoCrochemore.java&#10;Byte&#9;PSI&#9;JAVA://java.lang.Byte&#10;Tes&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/test/Test.java&#10;Knuth&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/knuthmorrispratt/KnuthMorrisPratt.java&#10;Res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Sim&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/simon/Simon.java&#10;Mor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/morrispratt/MorrisPratt.java&#10;Mai&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Filter&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/filter/Filter.java&#10;Runnable&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/lang/Runnable.java&#10;si&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/simon/Simon.java&#10;inpu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java&#10;TestRu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java&#10;Algorit&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithms.java&#10;Resu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Resul&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Algor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithm.java" />
+    <property name="SearchEverywhereHistoryKey" value="Abs&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java&#10;Boyer&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java&#10;Algo&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java&#10;Read&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/README.md&#10;Test&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java&#10;BoyerM&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java&#10;Result&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Pac&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/input/Packet.java&#10;Inp&#9;PSI&#9;JAVA://casa.kieran.dpi.input.Input&#10;sta&#9;PSI&#9;JAVA://casa.kieran.dpi.statistics.StatisticsGenerator&#10;Main&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;Ma&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/lang/Math.java&#10;Horsp&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/horspool/Horspool.java&#10;Aho&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/ahocorasick/AhoCorasick.java&#10;Trie&#9;PSI&#9;JAVA://casa.kieran.dpi.algorithm.trie.Trie&#10;Zh&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/zhutakaoka/ZhuTakaoka.java&#10;Not&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/notsonaive/NotSoNaive.java&#10;Boye&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java&#10;Coluss&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/colussi/Colussi.java&#10;Col&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/colussi/Colussi.java&#10;NotS&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/notsonaive/NotSoNaive.java&#10;para&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/AbstractParallelizableAlgorithm.java&#10;Filte&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/filter/Filter.java&#10;Filt&#9;PSI&#9;JAVA://casa.kieran.dpi.result.filter.ResultsFilterer&#10;Apos&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/ApostolicoCrochemore/ApostolicoCrochemore.java&#10;Rule&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/rule/Rule.java&#10;Apo&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/ApostolicoCrochemore/ApostolicoCrochemore.java&#10;Byte&#9;PSI&#9;JAVA://java.lang.Byte&#10;Tes&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/test/Test.java&#10;Knuth&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/knuthmorrispratt/KnuthMorrisPratt.java&#10;Res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Sim&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/simon/Simon.java&#10;Mor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/morrispratt/MorrisPratt.java&#10;Mai&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/Main.java&#10;res&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Filter&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/filter/Filter.java&#10;Runnable&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/src.zip!/java/lang/Runnable.java&#10;si&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/simon/Simon.java&#10;inpu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/inputfile/InputFileStatisticsGenerator.java&#10;TestRu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/statistics/testrun/TestRunStatisticsGenerator.java&#10;Algorit&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithms.java&#10;Resu&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Resul&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/result/Result.java&#10;Algor&#9;FILE&#9;file:///Users/kieran/Work/dpi-algorithms-java/src/casa/kieran/dpi/algorithm/Algorithm.java" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="build" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
@@ -1054,17 +1082,11 @@
       <workItem from="1454932134701" duration="226000" />
       <workItem from="1454932439213" duration="44719000" />
       <workItem from="1455092812993" duration="5173000" />
-      <workItem from="1455098486069" duration="99169000" />
+      <workItem from="1455098486069" duration="102149000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AlgorithmTest - 2016.02.16 at 08h 35m 30s.xml">
-      <configuration name="AlgorithmTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AlgorithmTest - 2016.02.16 at 08h 35m 57s.xml">
-      <configuration name="AlgorithmTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AlgorithmTest - 2016.02.16 at 08h 55m 16s.xml">
       <configuration name="AlgorithmTest" configurationId="JUnit" />
     </history-entry>
@@ -1089,9 +1111,15 @@
     <history-entry file="AlgorithmTest - 2016.02.16 at 12h 02m 44s.xml">
       <configuration name="AlgorithmTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AlgorithmTest - 2016.02.16 at 14h 17m 13s.xml">
+      <configuration name="AlgorithmTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AlgorithmTest - 2016.02.16 at 14h 18m 59s.xml">
+      <configuration name="AlgorithmTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="232525000" />
+    <option name="totallyTimeSpent" value="235505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1113,7 +1141,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="277" width="1280" height="190" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="0" y="277" width="1280" height="190" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15921193" sideWeight="0.4911111" order="0" side_tool="false" content_ui="tabs" />
@@ -1523,14 +1551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.017201835">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/galilgiancarlo/GalilGiancarlo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27522936">
@@ -1545,42 +1565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39793578">
           <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325688">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/quicksearch/QuickSearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="45" selection-start-line="113" selection-start-column="45" selection-end-line="113" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -1600,9 +1584,63 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49822065">
+        <state vertical-scroll-proportion="-14.4827585">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/boyermoore/BoyerMoore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37844038">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/quicksearch/QuickSearch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AbstractAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/smith/Smith.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8504983">
+          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
