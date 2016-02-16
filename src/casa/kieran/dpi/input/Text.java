@@ -4,8 +4,11 @@ public class Text implements Input {
 
     private String text;
 
+    private String id;
+
     public Text(String input) {
         this.text = input;
+        this.id = Integer.toString(text.hashCode());
     }
 
     @Override
@@ -15,6 +18,11 @@ public class Text implements Input {
         } catch (IndexOutOfBoundsException e) {
             throw new RuntimeException("Index " + location + " out of range.");
         }
+    }
+
+    @Override
+    public String getID() {
+        return id;
     }
 
     @Override

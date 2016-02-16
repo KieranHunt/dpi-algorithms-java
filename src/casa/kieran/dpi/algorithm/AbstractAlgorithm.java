@@ -10,13 +10,17 @@ import java.util.concurrent.Executors;
 
 abstract public class AbstractAlgorithm implements Algorithm {
 
-    private static final int DEFAULT_THREAD_POOL_SIZE = 10;
-
     public static final int ALPHABET_SIZE = 256;
+
+    private int threadCount;
+
+    public static final int DEFAULT_THREAD_COUNT = 10;
 
     protected void executeSearch(List<Runnable> runnableList) {
 
-        ExecutorService executorService = Executors.newFixedThreadPool(DEFAULT_THREAD_POOL_SIZE);
+        int threadsToUse = threadCount == 0 ? DEFAULT_THREAD_COUNT : threadCount;
+
+        ExecutorService executorService = Executors.newFixedThreadPool(threadsToUse);
 
         runnableList.forEach(executorService::execute);
 
@@ -52,5 +56,13 @@ abstract public class AbstractAlgorithm implements Algorithm {
         for (int i = from; i < to; i++) {
             input.set(i, value);
         }
+    }
+
+    public int getThreadCount() {
+        return threadCount;
+    }
+
+    public void setThreadCount(int threadCount) {
+        this.threadCount = threadCount;
     }
 }

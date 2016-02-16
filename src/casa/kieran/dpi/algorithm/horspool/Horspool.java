@@ -8,6 +8,7 @@ import casa.kieran.dpi.result.Results;
 import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -44,7 +45,38 @@ public class Horspool extends AbstractAlgorithm {
 
         int n = input.getLength();
 
+        List<Runnable> runnables = new ArrayList<>();
+
         rules.forEach(rule -> {
+            Runnable runnable = new HorspoolRunnable(input, result, n, rule);
+            runnables.add(runnable);
+        });
+
+        executeSearch(runnables);
+
+        result.end();
+        results.addResult(result);
+    }
+
+    @Override
+    public String toString() {
+        return "Horspool";
+    }
+
+    private class HorspoolRunnable implements Runnable {
+        private Input input;
+        private Result result;
+        private int n;
+        private Rule rule;
+
+        public HorspoolRunnable(Input input, Result result, int n, Rule rule) {
+            this.input = input;
+            this.result = result;
+            this.n = n;
+            this.rule = rule;
+        }
+
+        public void run() {
             int j;
             byte c;
 
@@ -60,14 +92,6 @@ public class Horspool extends AbstractAlgorithm {
                 }
                 j += bmBc.get(c);
             }
-        });
-
-        result.end();
-        results.addResult(result);
-    }
-
-    @Override
-    public String toString() {
-        return "Horspool";
+        }
     }
 }

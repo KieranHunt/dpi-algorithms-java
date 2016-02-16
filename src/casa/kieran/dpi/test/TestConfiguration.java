@@ -17,16 +17,22 @@ public class TestConfiguration {
     private List<String> rules;
     private List<TestInputs> inputs;
     private int times;
+    private int threadCount;
 
     public TestConfiguration() {
 
     }
 
-    public TestConfiguration(List<String> algorithms, List<String> rules, List<TestInputs> inputs, int times) {
+    public TestConfiguration(List<String> algorithms,
+                             List<String> rules,
+                             List<TestInputs> inputs,
+                             int times,
+                             int threadCount) {
         this.algorithms = algorithms;
         this.rules = rules;
         this.inputs = inputs;
         this.times = times;
+        this.threadCount = threadCount;
     }
 
     public static class TestInputs {
@@ -65,5 +71,9 @@ public class TestConfiguration {
 
     public int getTimes() {
         return times;
+    }
+
+    public int getThreadCount() {
+        return threadCount;
     }
 }

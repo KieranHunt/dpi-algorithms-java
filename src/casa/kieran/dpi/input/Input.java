@@ -33,4 +33,11 @@ public interface Input {
      * @return a string representation of the input
      */
     String getString();
+
+    /**
+     * Returns some kind of identifying string
+     *
+     * @return a string uniquely identifying the input.
+     */
+    String getID();
 }

@@ -1,10 +1,11 @@
 {
   "algorithms": [
-    "KnuthMorrisPratt",
     "Naive"
   ],
   "rules": [
-    "GCAGAGAG"
+    "google",
+    "person",
+    "year"
   ],
   "inputs": [
     {
@@ -12,5 +13,6 @@
       "location": "resources/tcpdump.pcap"
     }
   ],
-  "times": 1
+  "times": 1,
+  "threadCount": 3
 }

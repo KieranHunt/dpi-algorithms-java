@@ -1,5 +1,7 @@
 package casa.kieran;
 
+import casa.kieran.dpi.result.Results;
+import casa.kieran.dpi.result.printable.PrintableResultsFactory;
 import casa.kieran.dpi.statistics.OverallStatistics;
 import casa.kieran.dpi.statistics.StatisticsGenerator;
 import casa.kieran.dpi.statistics.writer.StatisticsWriter;
@@ -45,7 +47,8 @@ public class Main {
         StatisticsGenerator statisticsGenerator = new StatisticsGenerator(test.getResults());
 
         OverallStatistics overallStatistics = statisticsGenerator.generateStatistics();
-        StatisticsWriter.writeStatistics(overallStatistics);
+        StatisticsWriter.writeStatistics(test, overallStatistics,
+                String.format("statistics-%s.json", test.getTestId()));
 
         DateTime endStatistics = DateTime.now();
         Period elapsedStatistics = new Period(startStatistics, endStatistics);
@@ -55,6 +58,7 @@ public class Main {
         LOGGER.info("Testing and Analysing Complete");
         LOGGER.info("------------------------------\n");
 
-        System.out.println(test.getResults());
+        Results results = test.getResults();
+        PrintableResultsFactory.printResults(String.format("raw-results-%s.json", test.getTestId()), test);
     }
 }

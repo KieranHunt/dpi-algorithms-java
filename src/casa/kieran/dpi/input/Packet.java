@@ -1,13 +1,23 @@
 package casa.kieran.dpi.input;
 
+import java.util.Arrays;
+
 public class Packet implements Input {
 
     private org.pcap4j.packet.Packet packet;
     private String location;
 
+    private String id;
+
     public Packet(final org.pcap4j.packet.Packet packet, String location) {
         this.packet = packet;
         this.location = location;
+        this.id = Integer.toHexString(Arrays.hashCode(packet.getRawData()));
+    }
+
+    @Override
+    public String getID() {
+        return id;
     }
 
     @Override

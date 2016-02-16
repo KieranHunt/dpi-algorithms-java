@@ -1,6 +1,7 @@
 package casa.kieran.dpi.statistics.writer;
 
 import casa.kieran.dpi.statistics.OverallStatistics;
+import casa.kieran.dpi.test.Test;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,14 +15,14 @@ public class StatisticsWriter {
 
     private static final String DEFAULT_WRITE_LOCATION = "statistics.json";
 
-    public static void writeStatistics(OverallStatistics overallStatistics) {
+    public static void writeStatistics(Test test, OverallStatistics overallStatistics) {
 
         LOGGER.warn("Using default write location: " + DEFAULT_WRITE_LOCATION);
 
-        writeStatistics(overallStatistics, DEFAULT_WRITE_LOCATION);
+        writeStatistics(test, overallStatistics, DEFAULT_WRITE_LOCATION);
     }
 
-    private static void writeStatistics(OverallStatistics overallStatistics, String writeLocation) {
+    public static void writeStatistics(Test test, OverallStatistics overallStatistics, String writeLocation) {
         LOGGER.info("Attempting to write out statistics");
 
         ObjectMapper objectMapper = new ObjectMapper();

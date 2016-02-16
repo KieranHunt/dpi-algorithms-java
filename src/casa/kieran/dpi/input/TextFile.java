@@ -16,16 +16,24 @@ public class TextFile implements Input {
 
     private String location;
 
+    private String id;
+
     public TextFile(final String location) {
         try {
             text = new String(readAllBytes(get(location)));
             this.location = location;
+            this.id = Integer.toString(text.hashCode());
 
             LOGGER.info("Read " + text.length() + " characters from " + location);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public String getID() {
+        return id;
     }
 
     @Override

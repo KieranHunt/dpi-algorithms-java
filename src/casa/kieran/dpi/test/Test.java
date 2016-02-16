@@ -1,5 +1,6 @@
 package casa.kieran.dpi.test;
 
+import casa.kieran.dpi.algorithm.AbstractAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.algorithm.AlgorithmFactory;
 import casa.kieran.dpi.algorithm.Algorithms;
@@ -20,10 +21,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 
 public class Test {
+
+    private String testId;
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Test.class);
 
@@ -33,28 +37,12 @@ public class Test {
     private Rules rules;
     private Inputs inputs;
     private int times;
+    private int threadCount;
 
     private List<String> runIds = new ArrayList<>();
     private Set<String> testFileLocations = new HashSet<>();
 
     private Results results;
-
-    /**
-     * Create a new test object using all of the pre-created elements.
-     *
-     * @param algorithms - the algorithms to be tested
-     * @param rules      - the rules to match
-     * @param inputs     - the input files to test
-     * @param times      - the number of times to run the tests
-     */
-    public Test(Algorithms algorithms, Rules rules, Inputs inputs, int times) {
-        this.algorithms = algorithms;
-        this.rules = rules;
-        this.inputs = inputs;
-        this.times = times;
-        results = new Results(this);
-
-    }
 
     /**
      * Create a new test object from a configuration file.
@@ -68,14 +56,25 @@ public class Test {
         algorithms = readAlgorithmsFromTestConfiguration(testConfiguration, rules);
         inputs = readInputsFromTestConfiguration(testConfiguration);
         times = readTimesFromTestConfiguration(testConfiguration);
+        threadCount = readThreadCountFromTestConfiguration(testConfiguration);
+
+        algorithms.forEach(algorithm -> {
+            ((AbstractAlgorithm) algorithm).setThreadCount(threadCount);
+        });
+
+        testId = Integer.toHexString((new Random()).nextInt());
 
         results = new Results(this);
     }
 
+
     public void run() {
         String message =
-                String.format("Starting test with %s input(s), %s rule(s) and %s algorithm(s). Running %s time(s).",
-                        inputs.getNumberOfInputs(), rules.getNumberOfRules(), algorithms.getNumberOfAlgorithms(), times);
+                String.format("Starting test with %s input(s), %s rule(s) and %s algorithm(s). Running %s time(s). " +
+                                "This will generate %s result objects.",
+                        inputs.getNumberOfInputs(), rules.getNumberOfRules(), algorithms.getNumberOfAlgorithms(),
+                        times, inputs.getNumberOfInputs() * rules.getNumberOfRules() *
+                                algorithms.getNumberOfAlgorithms() * times);
         LOGGER.info("------------------------------");
         LOGGER.info("Starting Testing");
         LOGGER.info("------------------------------\n");
@@ -178,8 +177,22 @@ public class Test {
         LOGGER.info("Checking for number of test times");
         int times = ((Integer) testConfiguration.getTimes() != null) ? testConfiguration.getTimes() :
                 DEFAULT_TEST_TIMES;
-        LOGGER.info("Setting test times to " + times + "\n");
+        LOGGER.info("Setting test times to " + times);
         return times;
+    }
+
+    /**
+     * Read the maximum number of threads to use.
+     *
+     * @param testConfiguration - the TestConfiguration object to have the times read from.
+     * @return the maximum number of threads to use.
+     */
+    private int readThreadCountFromTestConfiguration(TestConfiguration testConfiguration) {
+        LOGGER.info("Checking for number of threads to use");
+        int count = ((Integer) testConfiguration.getThreadCount() != null) ? testConfiguration.getThreadCount() :
+                AbstractAlgorithm.DEFAULT_THREAD_COUNT;
+        LOGGER.info("Setting thread count to " + count + "\n");
+        return count;
     }
 
     /**
@@ -229,5 +242,9 @@ public class Test {
 
     public Set<String> getTestFileLocations() {
         return testFileLocations;
+    }
+
+    public String getTestId() {
+        return testId;
     }
 }
