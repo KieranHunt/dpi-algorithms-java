@@ -6,18 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="915f4217-a40c-4c93-a239-ba4da7da6158" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/Main.class" afterPath="$PROJECT_DIR$/out/production/dpi-algorithms-java/casa/kieran/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dpi-algorithms.log" afterPath="$PROJECT_DIR$/dpi-algorithms.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/Main.java" afterPath="$PROJECT_DIR$/src/casa/kieran/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/AlgorithmFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/optimalmismatch/OptimalMismatch.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/optimalmismatch/OptimalMismatch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/quicksearch/QuickSearch.java" afterPath="$PROJECT_DIR$/src/casa/kieran/dpi/algorithm/quicksearch/QuickSearch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java" afterPath="$PROJECT_DIR$/tst/casa/kieran/dpi/algorithm/AlgorithmTest.java" />
-    </list>
+    <list default="true" id="915f4217-a40c-4c93-a239-ba4da7da6158" name="Default" comment="" />
     <ignored path="dpi-algorithms-java.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -1116,7 +1105,7 @@
       <workItem from="1454932134701" duration="226000" />
       <workItem from="1454932439213" duration="44719000" />
       <workItem from="1455092812993" duration="5173000" />
-      <workItem from="1455098486069" duration="97709000" />
+      <workItem from="1455098486069" duration="97777000" />
     </task>
     <servers />
   </component>
@@ -1153,7 +1142,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231065000" />
+    <option name="totallyTimeSpent" value="231133000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
