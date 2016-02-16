@@ -1,5 +1,6 @@
 package casa.kieran.dpi.algorithm.trie;
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -8,12 +9,13 @@ import casa.kieran.dpi.rule.Rule;
 import casa.kieran.dpi.rule.Rules;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by kieran on 2015/11/10.
  */
-public class Trie implements Algorithm {
+public class Trie extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static Trie instance;
 
@@ -54,26 +56,44 @@ public class Trie implements Algorithm {
     public void search(Input input, Results results, int runNumber, String runId) {
         Result result = new Result(this.rules, input, this, runNumber, runId);
         result.start();
-        for (int i = 0; i < input.getLength(); i++) {
-            List<Byte> searchList = getSublist(input, i, input.getLength());
-            if (this.trieStructure.search(searchList)) {
-                result.addLocation(i);
-            }
-        }
+
+        Runnable runnable = new TrieRunnable(input, result);
+        List<Runnable> runnables = Arrays.asList(runnable);
+        executeSearch(runnables);
+
         result.end();
         results.addResult(result);
-    }
-
-    private ArrayList<Byte> getSublist(Input input, Integer start, Integer end) {
-        ArrayList<Byte> bytes = new ArrayList<>();
-        for (int i = start; i < end; i++) {
-            bytes.add(input.getByte(i));
-        }
-        return bytes;
     }
 
     @Override
     public String toString() {
         return "Trie";
+    }
+
+    private class TrieRunnable implements Runnable {
+        private Input input;
+        private Result result;
+
+        public TrieRunnable(Input input, Result result) {
+            this.input = input;
+            this.result = result;
+        }
+
+        public void run() {
+            for (int i = 0; i < input.getLength(); i++) {
+                List<Byte> searchList = getSublist(input, i, input.getLength());
+                if (trieStructure.search(searchList)) {
+                    result.addLocation(i);
+                }
+            }
+        }
+
+        private ArrayList<Byte> getSublist(Input input, Integer start, Integer end) {
+            ArrayList<Byte> bytes = new ArrayList<>();
+            for (int i = start; i < end; i++) {
+                bytes.add(input.getByte(i));
+            }
+            return bytes;
+        }
     }
 }

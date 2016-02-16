@@ -1,6 +1,7 @@
 package casa.kieran.dpi.algorithm.ahocorasick;
 
 
+import casa.kieran.dpi.algorithm.AbstractParallelizableAlgorithm;
 import casa.kieran.dpi.algorithm.Algorithm;
 import casa.kieran.dpi.input.Input;
 import casa.kieran.dpi.result.Result;
@@ -9,9 +10,11 @@ import casa.kieran.dpi.rule.Rules;
 import org.ahocorasick.trie.Emit;
 import org.ahocorasick.trie.Trie;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
-public class AhoCorasick implements Algorithm {
+public class AhoCorasick extends AbstractParallelizableAlgorithm implements Algorithm {
 
     private static AhoCorasick instance;
 
@@ -47,10 +50,9 @@ public class AhoCorasick implements Algorithm {
         Result result = new Result(rules, input, this, runNumber, runId);
         result.start();
 
-        Collection<Emit> emits = this.trie.parseText(input.getString());
-        emits.forEach(emit -> {
-            result.addLocation(emit.getStart());
-        });
+        Runnable runnable = new AhoCorasickRunnable(input, result);
+        List<Runnable> runnables = Arrays.asList(runnable);
+        executeSearch(runnables);
 
         result.end();
         results.addResult(result);
@@ -59,6 +61,23 @@ public class AhoCorasick implements Algorithm {
     @Override
     public String toString() {
         return "Aho-Corasick";
+    }
+
+    private class AhoCorasickRunnable implements Runnable {
+        private Input input;
+        private Result result;
+
+        public AhoCorasickRunnable(Input input, Result result) {
+            this.input = input;
+            this.result = result;
+        }
+
+        public void run() {
+            Collection<Emit> emits = trie.parseText(input.getString());
+            emits.forEach(emit -> {
+                result.addLocation(emit.getStart());
+            });
+        }
     }
 }
 

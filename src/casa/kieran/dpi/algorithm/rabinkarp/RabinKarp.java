@@ -88,8 +88,10 @@ public class RabinKarp extends AbstractParallelizableAlgorithm implements Algori
 
             j = 0;
             while (j <= n - m) {
-                if (hx == hy && memcmp(rule, input, 0, j, m)) {
-                    result.addLocation(j);
+                if (hx == hy) {
+                    if (memcmp(rule, input, 0, j, m)) {
+                        result.addLocation(j);
+                    }
                 }
                 j++;
                 if (j + m > n) {
