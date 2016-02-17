@@ -191,7 +191,7 @@ public class BoyerMoore extends AbstractAlgorithm {
                     result.addLocation(j);
                     j += bmGs.get(0);
                 } else {
-                    j += Math.max(bmGs.get(i), bmBc.get(input.getByte(i + j)) - m + 1 + i);
+                    j += Math.max(bmGs.get(i), bmBc.get((input.getByte(i + j)) & 0xFF) - m + 1 + i);
                 }
             }
         }

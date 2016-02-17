@@ -100,7 +100,7 @@ public class TurboBoyerMoore extends AbstractAlgorithm implements Algorithm {
                 } else {
                     v = m - 1 - i;
                     turboShift = u - v;
-                    bcShift = bmBc.get(input.getByte(i + j)) - m + 1 + i;
+                    bcShift = bmBc.get(input.getByte(i + j) & 0xFF) - m + 1 + i;
                     shift = Math.max(turboShift, bcShift);
                     shift = Math.max(shift, bmGs.get(i));
                     if (shift == bmGs.get(i)) {

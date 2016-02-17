@@ -90,7 +90,7 @@ public class Horspool extends AbstractAlgorithm {
                 if (rule.getByte(m - 1).equals(c) && memcmp(rule, input, 0, j, m - 1)) {
                     result.addLocation(j);
                 }
-                j += bmBc.get(c);
+                j += bmBc.get(c & 0xFF);
             }
         }
     }

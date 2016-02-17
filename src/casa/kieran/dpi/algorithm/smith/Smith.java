@@ -89,7 +89,10 @@ public class Smith extends AbstractAlgorithm {
                 if (memcmp(rule, input, 0, j, m)) {
                     result.addLocation(j);
                 }
-                j += Math.max(bmBc.get(input.getByte(j + m - 1)), qsBc.get(input.getByte(j + m)));
+                if (j + m >= n) {
+                    break;
+                }
+                j += Math.max(bmBc.get(input.getByte(j + m - 1) & 0xFF), qsBc.get(input.getByte(j + m) & 0xFF));
             }
         }
     }

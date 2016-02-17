@@ -125,7 +125,7 @@ public class ApostolicoGiancarlo extends AbstractAlgorithm {
                     shift = bmGs.get(0);
                 } else {
                     skip.set(m - 1, m - 1 - i);
-                    shift = Math.max(bmGs.get(i), bmBc.get(input.getByte(i + j)) - m + 1 + i);
+                    shift = Math.max(bmGs.get(i), bmBc.get((input.getByte(i + j)) & 0xFF) - m + 1 + i);
                 }
                 j += shift;
                 memcpy(skip, shift, m - shift);

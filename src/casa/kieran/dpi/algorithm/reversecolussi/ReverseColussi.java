@@ -207,10 +207,12 @@ public class ReverseColussi extends AbstractAlgorithm implements Algorithm {
             s = m;
             while (j <= n - m) {
                 while (j <= n - m && !rule.getByte(m - 1).equals(input.getByte(j + m - 1))) {
-                    s = rcBc.get(input.getByte(j + m - 1)).get(s);
+                    s = rcBc.get(input.getByte(j + m - 1) & 0xFF).get(s);
                     j += s;
                 }
-                for (i = 1; i < m && rule.getByte(h.get(i)).equals(input.getByte(j + h.get(i))); ++i) ;
+                for (i = 1; i < m && j + h.get(i) < n && rule.getByte(h.get(i)).equals(input.getByte(j + h.get(i)));
+                     ++i)
+                    ;
                 if (i >= m) {
                     if (j + m < n) {
                         result.addLocation(j);

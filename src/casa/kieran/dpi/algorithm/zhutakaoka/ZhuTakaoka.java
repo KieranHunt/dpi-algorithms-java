@@ -122,7 +122,8 @@ public class ZhuTakaoka extends AbstractAlgorithm implements Algorithm {
                     result.addLocation(j);
                     j += bmGs.get(0);
                 } else {
-                    j += Math.max(bmGs.get(i), ztBc.get(input.getByte(j + m - 2)).get(input.getByte(j + m - 1)));
+                    j += Math.max(bmGs.get(i), ztBc.get(input.getByte(j + m - 2) & 0xFF)
+                            .get(input.getByte(j + m - 1) & 0xFF));
                 }
             }
         }

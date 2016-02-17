@@ -100,7 +100,7 @@ public class Raita extends AbstractAlgorithm {
                         result.addLocation(j);
                     }
                 }
-                j += bmBc.get(c);
+                j += bmBc.get(c & 0xFF);
             }
         }
     }

@@ -60,6 +60,11 @@ public class QuickSearch extends AbstractAlgorithm {
     }
 
     @Override
+    public String toString() {
+        return "QuickSearch";
+    }
+
+    @Override
     public void search(Input input, Results results, int runNumber, String runId) {
         Result result = new Result(rules, input, this, runNumber, runId);
         result.start();
@@ -104,7 +109,10 @@ public class QuickSearch extends AbstractAlgorithm {
                 if (memcmp(rule, input, 0, j, m)) {
                     result.addLocation(j);
                 }
-                j += qsBc.get(input.getByte(j + m));
+                if (j + m >= n) {
+                    break;
+                }
+                j += qsBc.get(input.getByte(j + m) & 0xFF);
             }
         }
     }

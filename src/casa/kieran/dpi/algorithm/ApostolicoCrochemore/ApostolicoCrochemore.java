@@ -60,7 +60,7 @@ public class ApostolicoCrochemore extends AbstractAlgorithm {
 
     @Override
     public String toString() {
-        return "apostolicocrochemore";
+        return "ApostolicoCrochemore";
     }
 
     private class ApostolicoCrochemoreRunnable implements Runnable {

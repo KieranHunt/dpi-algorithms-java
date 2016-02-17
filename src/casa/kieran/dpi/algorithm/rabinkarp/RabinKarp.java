@@ -27,6 +27,11 @@ public class RabinKarp extends AbstractAlgorithm {
 
     private Map<Rule, Integer> preHY;
 
+    @Override
+    public String toString() {
+        return "RabinKarp";
+    }
+
     private Map<Rule, Integer> preHX;
 
     private int seed;
