@@ -36,9 +36,10 @@ public class PrintableResultsFactory {
             String inputID = result.getInput().getID();
             int runNumber = result.getRunNumber();
             String runId = result.getRunId();
+            long inputLength = result.getInput().getLength();
 
             PrintableResult printableResult = new PrintableResult(
-                    start, end, elapsed, rules, locations, algorithm, inputFile, inputID, runNumber, runId);
+                    start, end, elapsed, rules, locations, algorithm, inputFile, inputID, runNumber, runId, inputLength);
             printableResultList.add(printableResult);
         }
 

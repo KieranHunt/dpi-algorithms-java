@@ -14,6 +14,7 @@ public class PrintableResult {
     private String inputID;
     private int runNumber;
     private String runId;
+    private long inputLength;
 
     public PrintableResult(long start,
                            long end,
@@ -24,7 +25,8 @@ public class PrintableResult {
                            String inputFile,
                            String inputID,
                            int runNumber,
-                           String runId) {
+                           String runId,
+                           long inputLength) {
         this.start = start;
         this.end = end;
         this.elapsed = elapsed;
@@ -35,9 +37,7 @@ public class PrintableResult {
         this.inputID = inputID;
         this.runNumber = runNumber;
         this.runId = runId;
-    }
-
-    public PrintableResult() {
+        this.inputLength = inputLength;
     }
 
     public long getStart() {
@@ -118,5 +118,13 @@ public class PrintableResult {
 
     public void setRunId(String runId) {
         this.runId = runId;
+    }
+
+    public long getInputLength() {
+        return inputLength;
+    }
+
+    public void setInputLength(long inputLength) {
+        this.inputLength = inputLength;
     }
 }
